@@ -1,0 +1,21 @@
+@font-face {
+  font-family: coolvetica;
+  src: url(../../imagens/fontes/coolvetica/coolvetica\ rg.otf);
+}
+
+.makePost {
+  font-family: coolvetica;
+  background-color: #8d41ac;
+  float: right;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+  width: 15rem;
+}
+
+  .makePost:hover{
+    background-color: #ba60dd;
+  }
