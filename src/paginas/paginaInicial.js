@@ -1,6 +1,8 @@
+import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
-import PostsLists from "../components/posts/posts_list";
-import "./paginainicial.css"
+import PostsAudioList from "../components/posts/postAudio/postAudioList";
+import PostsLists from "../components/posts/postImagem/posts_list";
+import "./paginainicial.css";
 
 const DUMMY_DATA = [
   {
@@ -18,14 +20,10 @@ const DUMMY_DATA = [
     user_image:
       "https://www.cartacapital.com.br/wp-content/uploads/2019/02/Kombo-Leonardo-Da-Vinci-und-Leonardo-di-Caprio.jpg",
     title: "The Ballad of Mona Lisa",
-    user_image:
-      "https://www.cartacapital.com.br/wp-content/uploads/2019/02/Kombo-Leonardo-Da-Vinci-und-Leonardo-di-Caprio.jpg ",
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
     description:
-      "Mona Lisa, yeah \
-        Pleased to please you\
-        Mona Lisa",
+      "Mona Lisa, yeah Pleased to please you Mona Lisa",
   },
   {
     id: "m3",
@@ -39,11 +37,16 @@ const DUMMY_DATA = [
 ];
 
 export default function PaginaInicial() {
-  return (<div>
-    
+  return (
+  <div>
+    <MainNavigation/>
     <main>
       <div className="posts"> 
+      
+      <PostsAudioList postsAudios={DUMMY_DATA}/>
+
       <PostsLists postsImages={DUMMY_DATA}/> 
+      
       </div>
       <div className="make_post">
         <MakePosts/>
