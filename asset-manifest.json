@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/renanrith/artroom-react/static/css/main.bffa06f3.css",
+    "main.js": "/renanrith/artroom-react/static/js/main.bb816c9e.js",
+    "static/media/logo_sem_titulo.svg": "/renanrith/artroom-react/static/media/logo_sem_titulo.b98224afada315638d1802e2555b521e.svg",
+    "static/media/coolvetica rg.otf": "/renanrith/artroom-react/static/media/coolvetica rg.b9d8a93dec08b0ae6c19.otf",
+    "static/media/profile_icon.png": "/renanrith/artroom-react/static/media/profile_icon.ccfbd43d7fd3b65f42cb.png",
+    "static/media/comment_icon.png": "/renanrith/artroom-react/static/media/comment_icon.f415c9765e1e8098fc35.png",
+    "index.html": "/renanrith/artroom-react/index.html",
+    "main.bffa06f3.css.map": "/renanrith/artroom-react/static/css/main.bffa06f3.css.map",
+    "main.bb816c9e.js.map": "/renanrith/artroom-react/static/js/main.bb816c9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bffa06f3.css",
+    "static/js/main.bb816c9e.js"
+  ]
+}
