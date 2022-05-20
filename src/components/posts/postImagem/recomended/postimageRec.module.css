@@ -1,0 +1,80 @@
+.item {
+    margin: 20px;
+    background-color:#EBE4F9;
+    box-shadow: 0 3px 6px black;
+  }
+  .user{
+    padding: 0;
+    margin-bottom: 0.1rem;
+    padding-right: 0.7rem;
+    padding-left: 0.1rem;
+    display: flex;
+    
+  }
+  .userImage{
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+  } 
+  .item {
+    margin: 15px;
+    background-color:#fff7fb;
+    box-shadow: 0 3px 6px black;
+  }
+  
+  .image {
+    width: 25rem;
+    padding-top: 0.3rem;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .image img {
+    max-width: 25rem;
+    height: auto;
+    margin-left: auto;
+  }
+  
+  .icon {
+    opacity: 0.70;
+    height: 20px;
+  }
+  
+  .content {
+    padding: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    
+  }
+  
+  .content p{
+    margin: 5px;
+  }
+  
+  .content h3 {
+    font-size: 1.rem;
+    color: black;
+    margin: 5px;
+  }
+  
+  .actions {  
+    width: 100%;
+    padding: 0.5rem;
+    text-align:left;
+  }
+  
+  
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    
+  }

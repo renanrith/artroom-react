@@ -18,8 +18,8 @@ export default function  PaginaLogin(){
             <form>
             <input type="text" name="username" id="username" placeholder="Username / Email"/> <br/>
             <input type="password" name="password" id="password" placeholder="Senha"/> <br/>
-            <a href="index.html"> <input type="button" value="Logar" className="button"/> </a> <br/>
-            <a href="index.html"> <button className="cadastro"> Cadastre-se </button> </a>
+            <Link to="/home"> <input type="button" value="Logar" className="button"/> </Link> <br/>
+            <Link to="/home"> <button className="cadastro"> Cadastre-se </button> </Link>
             </form>
             <p id="subtext"> Ao continuar, você concorda com os <a href="https://www.youtube.com/watch?v=o-V643L37QQ&t=621s"> termos de serviços </a> do ArtRoom e confirma que leu nossa politica de privacidade e uso de cookies  </p>
         </div>

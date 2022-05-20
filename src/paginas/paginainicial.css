@@ -3,6 +3,7 @@ main{
     display: flex;
     margin: 40px auto 0px;
     max-width: 1100px;
+    
   }
   
   .posts{
@@ -18,7 +19,24 @@ main{
     margin-left: 50px;
   }
   
+  .side{
+    display: block;
+    float: right;
+    height: 100%;
+    margin-left: 10vh;
+    position: relative;
+  }
+
   .make_post{
+    width: 100%;
+    height: fit-content;
+    display: block;
+   float: left;
+    
+  }
+
+  .recomended{
+    height: 100%;
     width: 100%;
     display: block;
     float: right;
