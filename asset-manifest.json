@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/artroom-react/static/css/main.f4b9c19e.css",
-    "main.js": "/artroom-react/static/js/main.5897d8ca.js",
+    "main.css": "/artroom-react/static/css/main.4162ea68.css",
+    "main.js": "/artroom-react/static/js/main.00fe5c1d.js",
     "static/media/fundo.png": "/artroom-react/static/media/fundo.0653124588c565e425f9.png",
     "static/media/fundo.jpg": "/artroom-react/static/media/fundo.79a1032b49261997c4cb.jpg",
     "static/media/logo.svg": "/artroom-react/static/media/logo.6c5411100df046ca34e1c5d5c0f91c21.svg",
@@ -10,11 +10,11 @@
     "static/media/profile_icon.png": "/artroom-react/static/media/profile_icon.ccfbd43d7fd3b65f42cb.png",
     "static/media/comment_icon.png": "/artroom-react/static/media/comment_icon.f415c9765e1e8098fc35.png",
     "index.html": "/artroom-react/index.html",
-    "main.f4b9c19e.css.map": "/artroom-react/static/css/main.f4b9c19e.css.map",
-    "main.5897d8ca.js.map": "/artroom-react/static/js/main.5897d8ca.js.map"
+    "main.4162ea68.css.map": "/artroom-react/static/css/main.4162ea68.css.map",
+    "main.00fe5c1d.js.map": "/artroom-react/static/js/main.00fe5c1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4b9c19e.css",
-    "static/js/main.5897d8ca.js"
+    "static/css/main.4162ea68.css",
+    "static/js/main.00fe5c1d.js"
   ]
 }
