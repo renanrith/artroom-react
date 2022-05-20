@@ -37,8 +37,9 @@
   }
   
   .icon {
-    opacity: 0.70;
+    
     height: 20px;
+    
   }
   
   .content {
@@ -67,9 +68,9 @@
   
   .actions button {
     font: inherit;
-    cursor: pointer;
-    background-color: transparent;
+    cursor: pointer; 
     border: 0;
+    background-color: transparent;
   }
   
   ul {

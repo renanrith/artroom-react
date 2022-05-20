@@ -24,14 +24,13 @@ main{
     float: right;
     height: 100%;
     margin-left: 10vh;
-    position: relative;
+    
   }
 
   .make_post{
     width: 100%;
-    height: fit-content;
     display: block;
-   float: left;
+    float: left;
     
   }
 
