@@ -4,7 +4,11 @@
     src: url(../imagens/fontes/coolvetica/coolvetica\ rg.otf);
 }
 
-html, body {
+html, body{
+    height: 100%;
+}
+
+.ola {
     height: 100%;
     margin: 0;
     background-color: #1D0924;
@@ -161,13 +165,13 @@ html, body {
 
 @media (max-width: 900px){
 
-    html, body{
+    .ola{
         overflow: auto;
-        background-image: url("../imagens/login/fundo.png");
+        background-image: url("../imagens/login/fundo.jpg");
         background-size: cover;
     }
 
-    #wrapper {
+    .wrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
