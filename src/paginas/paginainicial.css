@@ -23,15 +23,14 @@ main{
     display: block;
     float: right;
     height: 100%;
-    margin-left: 10vh;
+    margin-left: 10vh;   
     
   }
 
   .make_post{
-    width: 100%;
     display: block;
-    float: left;
-    
+    margin-right: auto;
+    margin-right: 100px;
   }
 
   .recomended{
@@ -39,10 +38,15 @@ main{
     width: 100%;
     display: block;
     float: right;
+   
   }
   
   @media (max-width: 1300px){
-  
+    
+    .side{
+      display: none;
+    }
+
     .posts{
         position: static;
         height: 100%;
