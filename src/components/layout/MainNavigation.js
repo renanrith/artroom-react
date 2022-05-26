@@ -12,6 +12,11 @@ function MainNavigation() {
   return (
     <div className={classes.header_container}>
       <header>
+        
+        <div className={classes.hamburguer}>
+          ola
+        </div>
+
         <nav>
           <ul>
             <li>
@@ -19,6 +24,7 @@ function MainNavigation() {
               <Link to="/">
                 {" "}
                 <img
+                  draggable="false"
                   src={bell_icon}
                   alt="Bell Icon"
                   className={classes.icon}
@@ -30,6 +36,7 @@ function MainNavigation() {
               <Link to="/profile">
                 {" "}
                 <img
+                  draggable="false"
                   src={profile_icon}
                   alt="Profile Icon"
                   className={classes.icon}
@@ -41,6 +48,7 @@ function MainNavigation() {
               <Link to="/profile">
                 {" "}
                 <img
+                  draggable="false"
                   src={Marketplace_Icon}
                   alt="Market Place Icon"
                   className={classes.icon}
@@ -64,6 +72,7 @@ function MainNavigation() {
           <Link to="/home">
             {" "}
             <img
+              draggable="false"
               src={logo_sem_titulo}
               className={classes.logo}
               alt="Logo ArtRoom"

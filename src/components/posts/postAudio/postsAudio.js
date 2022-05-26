@@ -18,6 +18,7 @@ export default function PostAudio(props) {
         {/* User */}
         <div className={classes.user}>
           <img
+            draggable="false"
             className={classes.userImage}
             alt={props.user}
             src={props.userImage}
@@ -30,18 +31,34 @@ export default function PostAudio(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.image}>
-          <ReactAudioPlayer src="my_audio_file.ogg" className={classes.audio} autoPlay controls />
+          <ReactAudioPlayer
+            src="my_audio_file.ogg"
+            className={classes.audio}
+            autoPlay
+            controls
+          />
         </div>
         <div className={classes.actions}>
           <button onClick={() => setSelected(!selected)}>
             {selected ? (
-              <img className={classes.icon} src={blank_like} alt="Like" />
+              <img
+                draggable="false"
+                className={classes.icon}
+                src={blank_like}
+                alt="Like"
+              />
             ) : (
-              <img className={classes.icon} src={clicked_like} alt="Like" />
+              <img
+                draggable="false"
+                className={classes.icon}
+                src={clicked_like}
+                alt="Like"
+              />
             )}
           </button>
           <button>
             <img
+              draggable="false"
               className={classes.icon}
               src={comment_icon}
               alt="Comentarios"

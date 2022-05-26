@@ -13,7 +13,7 @@ export default function  PaginaLogin(){
       </div>
 
         <div className="login">
-            <img src={logo_sem_titulo} alt='ArtRoom Logo'/> <br/>
+            <img draggable="false" src={logo_sem_titulo} alt='ArtRoom Logo'/> <br/>
             Seja bem vindo!!
             <form>
             <input type="text" name="username" id="username" placeholder="Username / Email"/> <br/>
