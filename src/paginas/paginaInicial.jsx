@@ -1,9 +1,14 @@
+import React, { useContext } from 'react';
+import { AuthContext } from '../contexto/auth';
+
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
+import classes from "../components/layout/Make_post.module.css";
 import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
+
 
 const DUMMY_DATA = [
   {
@@ -50,6 +55,10 @@ const RECOMENDED_POST = [
 ]
 
 export default function PaginaInicial() {
+  const {authenticated, logout} = useContext(AuthContext)
+
+  const handleLogout = () => {logout()}
+
   return (
   <div>
     <MainNavigation />
@@ -68,6 +77,7 @@ export default function PaginaInicial() {
       
       <div className="recomended">
         <PostsListsRec postsImages={RECOMENDED_POST}/>
+        <button onClick={handleLogout} className={classes.makePost}>LOGOUT</button>
       </div>
       </div>
     </main>
