@@ -8,6 +8,8 @@ import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
+import PostPopup from '../components/layout/post/modal';
+import Backdrop from '../components/layout/post/backdrop';
 
 
 const DUMMY_DATA = [
@@ -80,6 +82,9 @@ export default function PaginaInicial() {
         <button onClick={handleLogout} className={classes.makePost}>LOGOUT</button>
       </div>
       </div>
+      <Backdrop/>
+      <PostPopup/>
+      
     </main>
     </div>
   );
