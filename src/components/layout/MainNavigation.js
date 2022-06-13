@@ -7,15 +7,16 @@ import Marketplace_Icon from "../../imagens/MainNavigation/Marketplace_Icon.png"
 import logo_sem_titulo from "../../imagens/MainNavigation/logo_sem_titulo.svg";
 
 import classes from "./MainNavigation.module.css";
+import ResponsiveMenu from "./responsiveMenu";
+
+
 
 function MainNavigation() {
+  
   return (
     <div className={classes.header_container}>
       <header>
-        
-        <div className={classes.hamburguer}>
-          ola
-        </div>
+      <ResponsiveMenu/>
 
         <nav>
           <ul>

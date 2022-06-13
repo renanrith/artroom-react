@@ -34,6 +34,8 @@ const AppRoutes = () => {
                 <Route exact path="/" element={<PaginaLogin/>}/>
                 <Route exact path="/perfil" element={<Perfil/>}/>
                 <Route exact path="/home" element={<Private><PaginaInicial/></Private>}/>
+                <Route path='/profile'/>
+                <Route path='Market'/>
             </Routes>
         </AuthProvider>
     )

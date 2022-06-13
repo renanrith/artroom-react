@@ -67,7 +67,7 @@ export default function PaginaInicial() {
     <main>
       <div className="posts"> 
       
-      <PostsAudioList postsAudios={DUMMY_DATA}/>
+      
 
       <PostsLists postsImages={DUMMY_DATA}/> 
       
