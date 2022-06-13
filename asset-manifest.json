@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/artroom-react/static/css/main.10fbc7bb.css",
-    "main.js": "/artroom-react/static/js/main.2854c7db.js",
+    "main.css": "/artroom-react/static/css/main.18bda061.css",
+    "main.js": "/artroom-react/static/js/main.48d0dc72.js",
     "static/media/fundo.png": "/artroom-react/static/media/fundo.0653124588c565e425f9.png",
+    "static/media/artie3.jpg": "/artroom-react/static/media/artie3.1775371733617a7e485e.jpg",
     "static/media/fundo.jpg": "/artroom-react/static/media/fundo.79a1032b49261997c4cb.jpg",
+    "static/media/artie7.jpg": "/artroom-react/static/media/artie7.cc8199ecb063bf9fa975.jpg",
+    "static/media/fotofundo_banner.jpg": "/artroom-react/static/media/fotofundo_banner.41d90df9de7108e87982.jpg",
     "static/media/logo.svg": "/artroom-react/static/media/logo.6c5411100df046ca34e1c5d5c0f91c21.svg",
     "static/media/logo_sem_titulo.svg": "/artroom-react/static/media/logo_sem_titulo.b98224afada315638d1802e2555b521e.svg",
     "static/media/coolvetica rg.otf": "/artroom-react/static/media/coolvetica rg.b9d8a93dec08b0ae6c19.otf",
     "static/media/profile_icon.png": "/artroom-react/static/media/profile_icon.ccfbd43d7fd3b65f42cb.png",
+    "static/media/chirio.jpg": "/artroom-react/static/media/chirio.90c6d6f99ced9fb94811.jpg",
     "static/media/comment_icon.png": "/artroom-react/static/media/comment_icon.f415c9765e1e8098fc35.png",
+    "static/media/imageIcon.png": "/artroom-react/static/media/imageIcon.d63d809910ae0fd1c529.png",
     "index.html": "/artroom-react/index.html",
-    "main.10fbc7bb.css.map": "/artroom-react/static/css/main.10fbc7bb.css.map",
-    "main.2854c7db.js.map": "/artroom-react/static/js/main.2854c7db.js.map"
+    "main.18bda061.css.map": "/artroom-react/static/css/main.18bda061.css.map",
+    "main.48d0dc72.js.map": "/artroom-react/static/js/main.48d0dc72.js.map"
   },
   "entrypoints": [
-    "static/css/main.10fbc7bb.css",
-    "static/js/main.2854c7db.js"
+    "static/css/main.18bda061.css",
+    "static/js/main.48d0dc72.js"
   ]
 }
