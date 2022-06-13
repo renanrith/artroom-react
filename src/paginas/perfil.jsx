@@ -1,4 +1,4 @@
-import "./perfilcss.css"
+import "./perfilcss.module.css"
 import chirio from "./../imagens/imgperfil/chirio.jpg";
 import bell_icon from "../imagens/MainNavigation/bell_icon.png";
 import profile_icon from "../imagens/MainNavigation/profile_icon.png";

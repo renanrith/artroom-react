@@ -82,8 +82,7 @@ export default function PaginaInicial() {
         <button onClick={handleLogout} className={classes.makePost}>LOGOUT</button>
       </div>
       </div>
-      <Backdrop/> 
-      <PostPopup/>
+      
       
     </main>
     </div>

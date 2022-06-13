@@ -2,6 +2,10 @@
   display: none;
 }
 
+.navMenu{
+  display: none;
+}
+
 .navbarToggle {
   display: none;
 }
