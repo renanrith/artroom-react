@@ -1,0 +1,217 @@
+
+@font-face {
+    font-family: coolvetica;
+    src: url(../imagens/fontes/coolvetica/coolvetica\ rg.otf);
+}
+
+html, body{
+    height: 100%;
+}
+
+.ola {
+    height: 100%;
+    margin: 0;
+    background-color: #1D0924;
+    font-family: coolvetica;
+    background-image: url("../imagens/login/fundo.png"), linear-gradient(90deg, rgba(21,2,54,1) 30%, rgba(94,7,96,1) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+   
+}
+
+.wrapper {
+    min-height: 100%; 
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    width: 100%;
+    align-self: center;
+    position: absolute;
+    right: 20px;
+}
+
+.cadastro button{
+    color: aliceblue;
+    background-color: #8d27ac;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: coolvetica;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+.cadastro button:hover{
+    background-color: #c45ce4;
+    padding: 11px;
+}
+
+.login{
+    padding: 30px;
+
+    border-radius: 10px;
+    float:right;
+    height: 50%;
+   
+
+    background-color: #0b0219;
+
+    color: aliceblue;
+
+    font-family: coolvetica;
+    font-size: 200%;
+
+    text-align: center;
+
+    margin-right: 6%;
+    margin-top: 10%;
+}
+
+
+.login .cadastro{
+    color: aliceblue;
+    background-color: #8d27ac;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: coolvetica;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    display: none;
+}
+
+.login .cadastro button:hover{
+    background-color: #c45ce4;
+}
+
+.login img {
+    width: 60%;
+}
+
+.login input{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: coolvetica;
+    font-size: 80%;
+    background-color: #FCA9EA;
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+}
+
+#subtext{
+    max-width: 350px;
+    margin: auto;
+    font-size: 15px;
+}
+
+.login p {
+    margin: 0px;
+}
+
+.login p a{
+   text-decoration: underline;
+   color: #FCA9EA;
+}
+
+.login p a:visited{
+    text-decoration: underline;
+    color: #FCA9EA;
+ }
+
+
+@media (max-width: 1250px){
+    .login{
+        padding: 20px;
+    
+        border-radius: 10px;
+        float:right;
+        height: 50%;
+       
+    
+        background-color: #0b0219;
+    
+        color: aliceblue;
+    
+        font-family: coolvetica;
+        font-size: 200%;
+    
+        text-align: center;
+    
+        margin-right: 6%;
+        margin-top: 6%;
+    }
+
+    #subtext{
+        max-width: 200px;
+        margin: auto;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 900px){
+
+    .ola{
+        overflow: auto;
+        background-image: url("../imagens/login/fundo.jpg");
+        background-size: cover;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .login{
+        float: left;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 100%;
+
+    }
+
+    .cadastro{
+    
+        display: none;
+    }
+    
+   .login .cadastro{
+       display: block;
+       margin: auto;
+       font-size: 100%;
+   }
+   
+   .login a{
+       text-decoration: none;
+   }
+
+   .login a:visited{
+    text-decoration: none;
+}
+
+   #subtext{
+    max-width: 200px;
+    margin: auto;
+    font-size: 10px;
+    padding-top: 10px;
+    }
+
+
+}

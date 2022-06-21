@@ -1,0 +1,211 @@
+@font-face {
+    font-family: coolvetica;
+    src: url(../imagens/fontes/coolvetica/coolvetica\ rg.otf);
+}
+
+/*
+body {
+    background-color: #1D0924;;
+    margin: 0;
+    background-image: url(../imagens/imgperfil/fotofundo_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    margin: auto;
+    max-width: 1320px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+}
+
+header input {
+    width: 300px;
+    height: 35px;
+    padding: 0px 0px;
+    border-radius: 10px;
+    background-image: url("../imagens/MainNavigation/searchicon.png");
+    background-size: 35px 35px;
+    background-position: 5px 0px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    font-size: 20px;
+    font-family: coolvetica;
+  }
+
+.top {
+    color:aliceblue;
+    display: flex;
+    justify-content: center;
+    height: 190px;
+
+}
+
+
+
+.img-header {
+    background-color: #cebfda;
+    width: 155px;
+    height: 155px;
+    padding: 3px;
+    border-radius: 50%;
+    margin-top: 90px;
+    transition: .1s ease;
+    
+}
+
+.img-header img {
+    background-color: #cebfda;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    transition: .1s ease;
+}
+
+.img-header:hover {
+    transform: scale(1.10);
+    
+} 
+
+.bottom {
+    background-color: #1D0924;
+    padding: 20px;
+    padding-top: 60px;
+    text-align: center;
+    
+}
+
+.bottom h3 {
+        line-height: .4;
+        font-size: 1.6rem;
+        font-family: coolvetica;
+        color: #2b1135;
+        letter-spacing: 1px;
+        cursor:default;
+    
+}
+
+.bottom h4 {
+        line-height: .4;
+        font-size: 1.1rem;
+        color: #83648f;
+        font-family: coolvetica;
+        letter-spacing: 1px;
+        transition: .2s ease;
+        cursor: default;
+        
+}
+
+.bottom p {
+        color:#493950;
+        margin-bottom: 20px;
+        font-family: coolvetica;
+        
+}
+
+
+.btn {
+    background: none;
+    padding: 13px 35px;
+    color: #e0c6eb;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #83648f;
+    border-radius: 5%;
+    transition: .3s ease;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+    
+}
+
+.btn:hover {
+    transform: scale(1.10);
+    padding: 15px 39px;
+    background-color: #3e1f4b;
+}
+
+.lateral-meio {
+    background-color: #cebfda;
+    width: 45%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, );
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+   
+       
+}
+
+.posts {
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.post {
+    background-color: #421a33;
+    width: 78%;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+.post img {
+
+    height: 500px;
+    width: 400px;
+}
+
+
+
+
+.direita{
+    display: flex;
+    align-items: center;
+}
+
+.direita img {
+    
+    height: 70px;
+    width: 100px;
+}
+
+.icone{
+    transition: all 0.15s;
+}
+
+.icone:hover{
+
+    transform: scale(1.10);
+    height: 45px;
+    width: 45px;
+    
+}
+
+.iconeart:hover {
+   cursor: pointer;
+}
+*/

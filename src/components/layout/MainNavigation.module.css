@@ -1,0 +1,144 @@
+@font-face {
+  font-family: coolvetica;
+  src: url(../../imagens/fontes/coolvetica/coolvetica\ rg.otf);
+}
+
+body {
+  height: 100%;
+  background-color: #481563;
+  background-image:
+    linear-gradient(
+      #220830, #3b0a52
+    );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  height: 40px;
+}
+
+.logo {
+  height: 50px;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+  display: block;
+}
+
+hr {
+  margin: 0;
+}
+
+.header_container {
+  border-bottom: white solid 1px;
+  position: sticky;
+  top: 0;
+  background-color: #1d0924;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  max-width: 1320px;
+  align-self: center;
+  
+  
+}
+
+
+header nav {
+  margin-right: auto;
+}
+
+header .pesquisa {
+  margin-right: 10px;
+}
+
+header input {
+  width: 300px;
+  height: 35px;
+  padding: 0px 0px;
+  border-radius: 10px;
+  background-image: url("../../imagens/MainNavigation/searchicon.png");
+  background-size: 35px 35px;
+  background-position: 5px 0px;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  font-size: 20px;
+  font-family: coolvetica;
+}
+
+@media (max-width: 900px) {
+  
+  header nav{
+    display: none;
+  }
+
+  
+
+  .nav_menu li {
+    float: none;
+    display: none;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .nav_menu {
+    flex-direction: column;
+  }
+
+  .nav_menu.active {
+    display: flex;
+  }
+
+  .header_container {
+    background-color: #1d0924;
+  }
+}
+
+@media (max-width: 1300px) {
+  .icon {
+    height: 30px;
+  }
+
+  header {
+    padding: 0;
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #1d0924;
+  }
+
+  header nav {
+    margin-right: auto;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  header input {
+    height: 35px;
+    margin-right: 70%;
+    margin-left: -70%;
+  }
+}
