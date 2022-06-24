@@ -107,10 +107,6 @@ header input {
     flex-direction: column;
   }
 
-  .pesquisa {
-    display: none;
-  }
-
   .nav_menu.active {
     display: flex;
   }
