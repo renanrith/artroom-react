@@ -11,6 +11,10 @@ body {
     background-size: cover;
 }
 
+.bio{
+    text-align: center;
+}
+
 header {
     align-items: center;
     align-self: center;
@@ -27,6 +31,7 @@ header img {
     width: 40px;
     height: 40px;
 }
+
 
 header input {
     width: 300px;
@@ -80,26 +85,18 @@ header input {
     background-color: #1D0924;
     padding: 20px;
     padding-top: 60px;
-    text-align: center;
-    background-color: #cebfda;
+    background-color: #2A1132;
     width: 45%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, );
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
+    max-width: 600px;
     
 }
 
-.bottom h3 {
-        line-height: .4;
-        font-size: 1.6rem;
-        font-family: coolvetica;
-        color: #2b1135;
-        letter-spacing: 1px;
-        cursor:default;
-    
-}
+
 
 .bottom h4 {
         line-height: .4;
@@ -115,7 +112,7 @@ header input {
 .bottom p {
         color:#493950;
         margin-bottom: 20px;
-        font-family: coolvetica;
+        
         
 }
 
@@ -132,9 +129,6 @@ header input {
     border-radius: 5%;
     transition: .3s ease;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
-    
-    
 }
 
 .btn:hover {
@@ -143,49 +137,13 @@ header input {
     background-color: #3e1f4b;
 }
 
-
-.posts {
-    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-
-
-.post {
-    background-color: #421a33;
-    width: 78%;
-    height: 530px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    border-radius: 5px;
-    position: relative;
-    align-items: center;
-    color: white;
-}
-
-
-
-
-.post img {
-
-    height: 500px;
-    width: 400px;
-}
-
-
-
-
 .direita{
     display: flex;
     align-items: center;
 }
 
 .direita img {
-    
-    height: 70px;
-    width: 100px;
+    width: 100%;
 }
 
 .icone{

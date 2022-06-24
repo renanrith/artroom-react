@@ -69,11 +69,12 @@ return(
     </div>
 
     <div className={classes.bottom}>
+        <div className={classes.bio}>
         <h3>Rafaela</h3>
         <h4>Designer Digital</h4>
         <p>Gosto muito de pintura digital e estou começando <br/> agr em 3D, me desejem sorte! ^^ </p>
-        <a href="#" className={classes.btn}>Chat</a>
-
+        <a className={classes.btn}>Chat</a>
+        </div>
     <PostsLists postsImages={DUMMY_DATA}/>
 
     </div>
