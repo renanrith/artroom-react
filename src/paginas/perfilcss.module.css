@@ -3,7 +3,7 @@
     src: url(../imagens/fontes/coolvetica/coolvetica\ rg.otf);
 }
 
-body {
+.background {
     background-color: #1D0924;;
     margin: 0;
     background-image: url(../imagens/imgperfil/fotofundo_banner.jpg);
@@ -26,12 +26,6 @@ header {
     padding-left: 30px;
     padding-right: 30px;
 }
-
-header img {
-    width: 40px;
-    height: 40px;
-}
-
 
 header input {
     width: 300px;
@@ -148,6 +142,7 @@ header input {
 
 .icone{
     transition: all 0.15s;
+    height: 50px;
 }
 
 .icone:hover{

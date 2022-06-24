@@ -60,12 +60,10 @@ export default function PaginaInicial() {
   const handleLogout = () => {logout()}
 
   return (
-  <div>
+  <div className='body'>
     <MainNavigation />
     <main>
       <div className="posts"> 
-      
-      
 
       <PostsLists postsImages={DUMMY_DATA}/> 
       

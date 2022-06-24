@@ -1,3 +1,11 @@
+.body{
+  background-color: #481563;
+  background-image:
+    linear-gradient(
+      #220830, #3b0a52
+    );
+}
+
 main{
     height: 100%  ;
     display: flex;

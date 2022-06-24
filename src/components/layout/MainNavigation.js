@@ -60,7 +60,7 @@ function MainNavigation() {
             </li>
           </ul>
         </nav>
-        <div className="search">
+        <div className={classes.search}>
           <BarraPesquisa data={Names}/>
         </div>
         <div className={classes.logo}>

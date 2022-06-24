@@ -9,6 +9,7 @@ import art7 from "./../imagens/imgperfil/artie7.jpg"
 import { Link } from "react-router-dom";
 import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
+import MainNavigation from "../components/layout/MainNavigation";
 
 export default function Perfil(){
 
@@ -35,24 +36,9 @@ export default function Perfil(){
       ];
 
 return(
-<div>
-    <header>
-        <div className={classes.icons}>
-            <img className={classes.icone} src={bell_icon} alt="notifications"/>
-            <img className={classes.icone} src={profile_icon} alt="perfil"/>
-            <img className={classes.icone} src={Marketplace_Icon} alt="marketplace"/>
-        </div>
-
-        <div className={classes.direita}>
-            <input type="text" />
-            <Link to="/home">
-            <img className={classes.iconeart} src={logo_sem_titulo} alt="iconeart"/>
-            </Link>
-        </div>
-
-
-    </header>
-
+<div className={classes.background}>
+    <MainNavigation/>
+    
     <div>
 
         <div className={classes.cardContainer}>
