@@ -52,7 +52,7 @@ header input {
 
 
 
-.img-header {
+.imgHeader {
     background-color: #cebfda;
     width: 155px;
     height: 155px;
@@ -63,7 +63,7 @@ header input {
     
 }
 
-.img-header img {
+.imgHeader img {
     background-color: #cebfda;
     width: 155px;
     height: 155px;
@@ -71,7 +71,7 @@ header input {
     transition: .1s ease;
 }
 
-.img-header:hover {
+.imgHeader:hover {
     transform: scale(1.10);
     
 } 
@@ -81,6 +81,13 @@ header input {
     padding: 20px;
     padding-top: 60px;
     text-align: center;
+    background-color: #cebfda;
+    width: 45%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, );
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
     
 }
 
@@ -136,17 +143,6 @@ header input {
     background-color: #3e1f4b;
 }
 
-.lateral-meio {
-    background-color: #cebfda;
-    width: 45%;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, );
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 10px;
-   
-       
-}
 
 .posts {
     display: flex;
