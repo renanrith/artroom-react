@@ -2,6 +2,7 @@
   margin: 20px;
   background-color:#EBE4F9;
   box-shadow: 0 3px 6px black;
+  overflow: hidden;
 }
 .user{
   padding: 0;
@@ -84,4 +85,12 @@ ul {
   margin: 0;
   padding: 0;
   
+}
+
+@media (max-width: 900px){
+
+.item{
+  width: 24rem;
+}
+
 }

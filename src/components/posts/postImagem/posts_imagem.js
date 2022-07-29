@@ -12,6 +12,7 @@ const likes = { blank_like, clicked_like };
 export default function PostImage(props) {
   const [selected, setSelected] = useState(likes.blank_like);
   return (
+    
     <li className={classes.item}>
       <Post>
         {/* User */}
