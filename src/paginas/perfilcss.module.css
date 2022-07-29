@@ -9,6 +9,7 @@
     background-image: url(../imagens/imgperfil/fotofundo_banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .bio{
@@ -78,6 +79,7 @@ header input {
 .bottom {
     background-color: #1D0924;
     padding: 20px;
+   
     padding-top: 60px;
     background-color: #2A1132;
     width: 45%;
@@ -90,12 +92,19 @@ header input {
     
 }
 
+.textoBranco {
+    font-family: coolvetica;
+    color: aliceblue;
+}
 
+.textoRosa{
+    color: #FCA9EA;
+}
 
 .bottom h4 {
         line-height: .4;
         font-size: 1.1rem;
-        color: #83648f;
+    
         font-family: coolvetica;
         letter-spacing: 1px;
         transition: .2s ease;
@@ -103,11 +112,11 @@ header input {
         
 }
 
+
+
 .bottom p {
-        color:#493950;
+    
         margin-bottom: 20px;
-        
-        
 }
 
 
@@ -157,3 +166,20 @@ header input {
    cursor: pointer;
 }
 
+
+@media (max-width: 1300px){
+    .bottom {
+        background-color: #1D0924;
+        padding: 20px;
+        padding-top: 60px;
+        background-color: #2A1132;
+        width: 95%;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, );
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 10px;
+        max-width: 600px;
+        
+    }
+  }

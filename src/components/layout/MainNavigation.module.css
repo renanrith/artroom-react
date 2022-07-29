@@ -122,7 +122,9 @@ header input {
     padding: 0;
     justify-content: flex-end;
     margin: 0;
+    width: 24rem;
     background-color: #1d0924;
+    overflow: hidden;
   }
 
   header nav {
@@ -139,8 +141,5 @@ header input {
 
   header input {
     display: none;
-    height: 35px;
-    margin-right: 70%;
-    margin-left: -70%;
   }
 }

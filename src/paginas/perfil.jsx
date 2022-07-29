@@ -21,7 +21,7 @@ export default function Perfil(){
           user_image:
             " http://localhost:3000/artroom-react/static/media/chirio.90c6d6f99ced9fb94811.jpg ",
           title: "Artie",
-          image: "https://pbs.twimg.com/media/FWCu0t7X0AAb6ID?format=jpg&name=large",
+          image: "https://img.freepik.com/fotos-gratis/foto-de-grande-angular-de-uma-unica-arvore-crescendo-sob-um-ceu-nublado-durante-um-por-do-sol-cercado-por-grama_181624-22807.jpg?w=2000",
           description: "eu adoro o artie",
         },
         {
@@ -30,7 +30,7 @@ export default function Perfil(){
             user_image:
               " http://localhost:3000/artroom-react/static/media/chirio.90c6d6f99ced9fb94811.jpg ",
             title: "Artie",
-            image: "https://pbs.twimg.com/media/FWCvYzSWAAERs6S?format=jpg&name=4096x4096",
+            image: "https://img.freepik.com/fotos-gratis/foto-de-grande-angular-de-uma-unica-arvore-crescendo-sob-um-ceu-nublado-durante-um-por-do-sol-cercado-por-grama_181624-22807.jpg?w=2000",
             description: "eu adoro o artie",
         },
       ];
@@ -56,9 +56,9 @@ return(
 
     <div className={classes.bottom}>
         <div className={classes.bio}>
-        <h3>Rafaela</h3>
-        <h4>Designer Digital</h4>
-        <p>Gosto muito de pintura digital e estou começando <br/> agr em 3D, me desejem sorte! ^^ </p>
+        <h3 className={classes.textoBranco}>Rafaela</h3>
+        <h4 className={classes.textoBranco} >Designer Digital</h4>
+        <p className={classes.textoRosa}>Gosto muito de pintura digital e estou começando <br/> agr em 3D, me desejem sorte! ^^ </p>
         <a className={classes.btn}>Chat</a>
         </div>
     <PostsLists postsImages={DUMMY_DATA}/>
