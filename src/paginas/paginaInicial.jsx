@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from '../contexto/auth';
 
 import MainNavigation from "../components/layout/MainNavigation";
