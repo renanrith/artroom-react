@@ -1,9 +1,10 @@
-import classes from "./Make_post.module.css"
+import classes from "./cadastroPopUp.module.css"
 import { useState } from "react"
-import PostPopup from "./post/modal";
-import Backdrop from "./post/backdrop";
 
-export default function MakePosts() {
+import Backdrop from "../post/backdrop";
+import CadastroPopup from "./cadastroPop";
+
+export default function CadastroButton() {
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
 
     function PostHandler() {
@@ -17,9 +18,9 @@ export default function MakePosts() {
     return(
         <div >
         <button className={classes.makePost} onClick={PostHandler}>
-           + Novo Post
+           Cadastre-se
         </button>
-        { modalIsOpen && <PostPopup/> }
+        { modalIsOpen && <CadastroPopup/> }
         { modalIsOpen && <Backdrop onClick={ClosePostHandler}/> }
         </div>
     )

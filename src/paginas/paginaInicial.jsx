@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../contexto/auth';
 
 import MainNavigation from "../components/layout/MainNavigation";
@@ -55,9 +55,14 @@ const RECOMENDED_POST = [
 ]
 
 export default function PaginaInicial() {
-  const {authenticated, logout} = useContext(AuthContext)
 
-  const handleLogout = () => {logout()}
+  const [loggedIn, setLoggedIn] = useState(true);
+
+    useEffect(() => {
+        if (!localStorage.getItem("loggedIn")) {
+          localStorage.setItem("loggedIn", false);
+        }
+      }, []);
 
   return (
   <div className='body'>
@@ -75,11 +80,9 @@ export default function PaginaInicial() {
       
       <div className="recomended">
         <PostsListsRec postsImages={RECOMENDED_POST}/>
-        <button onClick={handleLogout} className={classes.makePost}>LOGOUT</button>
+        <button className={classes.makePost}>LOGOUT</button>
       </div>
       </div>
-      
-      
     </main>
     </div>
   );

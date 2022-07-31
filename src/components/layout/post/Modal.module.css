@@ -18,7 +18,15 @@
   height: 50px;
   float: left;
   cursor: pointer;
+  transition: all 0.15s;
 }
+
+.icon:hover {
+  transform: scale(1.10);
+  height: 55px;
+  cursor: pointer;
+}
+
 
 .titulo{
   width: 100%;
