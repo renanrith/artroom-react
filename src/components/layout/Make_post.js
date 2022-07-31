@@ -21,6 +21,7 @@ export default function MakePosts() {
         </button>
         { modalIsOpen && <PostPopup/> }
         { modalIsOpen && <Backdrop onClick={ClosePostHandler}/> }
+        { modalIsOpen && <PostPopup onClick={ClosePostHandler}/> }
         </div>
     )
 }

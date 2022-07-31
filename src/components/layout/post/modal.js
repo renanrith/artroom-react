@@ -1,16 +1,36 @@
 import classes from "./Modal.module.css";
-import imageIcon from "./../../../imagens/makepost/imgIcon.png";
-import audioIcon from "./../../../imagens/makepost/audIcon.png";
-import textIcon from "./../../../imagens/makepost/txtIcon.png";
-import videoIcon from "./../../../imagens/makepost/videoIcon.png";
+import { MdAddPhotoAlternate } from "react-icons/md"
+import { AiFillSound } from "react-icons/ai"
+import { RiVideoAddFill } from "react-icons/ri"
 
-export default function PostPopup(){
+export default function PostPopup(props){
     return(
-    <div className={classes.modal}>
-    <img src={imageIcon} className={classes.icon}/>
-    <img src={audioIcon} className={classes.icon}/>
-    <img src={textIcon} className={classes.icon}/>
-    <img src={videoIcon} className={classes.icon}/>
-    </div>
+        <div className={classes.modal}>
+        <input
+          className={classes.titulo}
+          type="text"
+          name="Titulo"
+          id="Titulo"
+          placeholder="Titulo"
+          autoComplete="off"
+          autoCapitalize="On"
+        />
+        <textarea
+          
+          className={classes.descricao}
+          type="text"
+          name="Descricao"
+          id="Descricao"
+          placeholder="Descrição"
+          autoComplete="off"
+          autoCapitalize="On"
+        />
+        <br/>
+        <MdAddPhotoAlternate size={40} className={classes.icon} color="#31F0F7"/>
+        <AiFillSound size={40} className={classes.icon} color="#F72F3A"/>
+        <RiVideoAddFill size={40} className={classes.icon} color="#6C3BF4"/>
+
+        <button className={classes.postar} onClick={props.onClick}> Postar </button>
+      </div>
     )
 }

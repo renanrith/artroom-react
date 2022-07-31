@@ -1,3 +1,5 @@
+
+
 .modal {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -13,4 +15,44 @@
 
 .icon {
   padding-left: 20px;
+  height: 50px;
+  float: left;
+  cursor: pointer;
+}
+
+.titulo{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 30px;
+  font-family: coolvetica;
+}
+
+.descricao{
+  width: 100%;
+  border: none;
+  outline: none;
+  border-top: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: coolvetica;
+  resize: none;
+}
+
+.postar{
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  float: right;
+  background-color: #8d41ac;
+  font-family: coolvetica;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.postar:hover{
+  background-color: #ba60dd;
 }
