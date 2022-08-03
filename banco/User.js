@@ -3,6 +3,8 @@ const router = express.Router();
 
 const db = require('./db');
 
+const jwt = require('jsonwebtoken');
+
 router.post("/registrar", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -26,7 +28,11 @@ router.post("/logar", (req, res) => {
         }
         if(results.length > 0){
             if(password == results[0].senha){
-                res.json({ loggedIn: true, username: username });
+                const id = results[0].id;
+                const accessToken = jwt.sign({id}, "sbggbgehtehnethnetuhtehuy", {
+                    expiresIn: "1w"
+                });
+                res.json({ loggedIn: true, token: accessToken, result: results});
                 console.log("logou")
             } else{
                 res.json({loggedIn: false, message: "Usuário ou senha incorretos"})
@@ -39,5 +45,7 @@ router.post("/logar", (req, res) => {
         }
     );
 });
+
+
 
 module.exports = router;

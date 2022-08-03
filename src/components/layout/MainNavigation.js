@@ -36,7 +36,7 @@ function MainNavigation() {
             </li>
             <li>
               {" "}
-              <Link to="/profile">
+              <Link to="/perfil">
                 {" "}
                 <img
                   draggable="false"

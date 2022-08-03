@@ -1,17 +1,16 @@
 import React, { useState, useContext } from "react";
+
+import PaginaInicial from "../AppRoutes";
 import Axios from "axios";
-import { AuthContext } from "../contexto/auth";
 import logo_sem_titulo from "../imagens/MainNavigation/logo.svg";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./paginaLogin.css";
-import{ useNavigate } from 'react-router-dom';
 import CadastroButton from "../components/layout/cadastro/cadastroButton";
 
 
 const PaginaLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
     const [errorMessage, setErrorMessage] = useState("");
 
     const navigate = useNavigate();
@@ -23,7 +22,8 @@ const PaginaLogin = () => {
         }).then((response) => {
             if(response.data.loggedIn){
                 localStorage.setItem("loggedIn", true);
-                localStorage.setItem("username", response.data.username);
+                localStorage.setItem("token", response.data.token);
+                navigate("/home");
             } else {
                 setErrorMessage(response.data.message);
             }
