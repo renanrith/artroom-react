@@ -33,6 +33,19 @@ export default function PostsLists(props) {
         /> 
         )
        }
+       else if (postsImages.type === "audio") { 
+        return (
+        <PostImage
+          key={postsImages.id}
+          id={postsImages.id}
+          user={postsImages.user}
+          userImage={postsImages.user_image}
+          title={postsImages.title}
+          description={postsImages.description}
+          type={postsImages.type}
+        /> 
+        )
+       }
       })}
     </ul>
     </div>

@@ -51,7 +51,18 @@ const DUMMY_DATA = [
   title: "oi gente",
   description: "sera que funcionou",
   type: "text",
-  }
+  },
+  {
+    id: "m5",
+    user: "xaybur",
+    user_image:
+        " https://i1.sndcdn.com/avatars-zFydfsGVr4u5cr1y-hWwYxw-original.jpg ",
+    title: "A Harbinger Arrives",
+    description: "xaybur no beat",
+    audio: "https://soundcloud.com/xaybur/a-harbinger-arrives",
+    type: "audio",
+    }
+  
 
 ];
 
