@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import PaginaInicial from "../AppRoutes";
 import Axios from "axios";
@@ -23,13 +23,18 @@ const PaginaLogin = () => {
             if(response.data.loggedIn){
                 localStorage.setItem("loggedIn", true);
                 localStorage.setItem("token", response.data.token);
+                localStorage.setItem("username", username);
                 navigate("/home");
             } else {
                 setErrorMessage(response.data.message);
             }
         });
-
     };
+    useEffect(() => {
+        if (localStorage.getItem("loggedIn")) {
+          navigate("/home");
+        }
+      });
     return (
         <div style={{ height: "100vh" }} className="ola">
             <div className="wrapper">
