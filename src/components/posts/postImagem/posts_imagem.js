@@ -11,8 +11,8 @@ const likes = { blank_like, clicked_like };
 
 export default function PostImage(props) {
   const [selected, setSelected] = useState(likes.blank_like);
+  if (props.type === "image") {
   return (
-    
     <li className={classes.item}>
       <Post>
         {/* User */}
@@ -24,9 +24,12 @@ export default function PostImage(props) {
           </h3>
           {/* Post */}
         </div>
+        
         <div className={classes.image}>
           <img src={props.image} alt={props.title} />
         </div>
+
+
         <div className={classes.content}>
           <h3>{props.title}</h3>
           <p>{props.description}</p>
@@ -49,5 +52,43 @@ export default function PostImage(props) {
         </div>
       </Post>
     </li>
-  );
+  )}
+  else if (props.type === "text") {
+    return (
+      <li className={classes.item}>
+        <Post>
+          {/* User */}
+          <div className={classes.user}>
+          <img className={classes.userImage} alt={props.user} src={props.userImage} />
+            <h3 className={classes.user}>
+  
+              {props.user}
+            </h3>
+            {/* Post */}
+          </div>
+  
+          <div className={classes.content}>
+            <h3>{props.title}</h3>
+            <p>{props.description}</p>
+          </div>
+          <div className={classes.actions}>
+            <button onClick={() => setSelected(!selected)}>
+              {selected ? (
+                <img className={classes.icon} src={blank_like} alt="Like" />
+              ) : (
+                <img className={classes.icon} src={clicked_like} alt="Like" />
+              )}
+            </button>
+            <button>
+              <img
+                className={classes.icon}
+                src={comment_icon}
+                alt="Comentarios"
+              />
+            </button>
+          </div>
+        </Post>
+      </li>
+  
+    )};
 }

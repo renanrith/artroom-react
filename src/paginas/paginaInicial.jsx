@@ -19,6 +19,7 @@ const DUMMY_DATA = [
     title: "Olha que legal",
     image: "https://i.imgur.com/dEsSnPK.png",
     description: "Muito legal né",
+    type: "image",
   },
   {
     id: "m2",
@@ -30,6 +31,7 @@ const DUMMY_DATA = [
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
     description:
       "Mona Lisa, yeah Pleased to please you Mona Lisa",
+      type: "image",
   },
   {
     id: "m3",
@@ -38,8 +40,19 @@ const DUMMY_DATA = [
       "https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2021/03/trollface-origem-significado-e-polemicas-em-torno-do-meme-960x596.jpg",
     title: "peter griffin sans",
     image: " https://i.ytimg.com/vi/QhbNw2YHDw0/maxresdefault.jpg ",
-    description: "socorro",
+    description: "socorro", 
+    type: "image",
   },
+  {
+  id: "m4",
+  user: "renan",
+  user_image:
+      " https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg ",
+  title: "oi gente",
+  description: "sera que funcionou",
+  type: "text",
+  }
+
 ];
 
 const RECOMENDED_POST = [
