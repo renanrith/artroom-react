@@ -1,5 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { AuthContext } from '../contexto/auth';
+import React, { useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexto/auth";
 
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
@@ -8,7 +9,6 @@ import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
-
 
 const DUMMY_DATA = [
   {
@@ -29,9 +29,13 @@ const DUMMY_DATA = [
     title: "The Ballad of Mona Lisa",
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
+<<<<<<< HEAD
     description:
       "Mona Lisa, yeah Pleased to please you Mona Lisa",
       type: "image",
+=======
+    description: "Mona Lisa, yeah Pleased to please you Mona Lisa",
+>>>>>>> 8f89b293655b35b8a35d269d9a8b930d9f765c92
   },
   {
     id: "m3",
@@ -73,41 +77,49 @@ const RECOMENDED_POST = [
     user_image:
       " https://64.media.tumblr.com/2d5cedab91a38d6b72e8bce6e3ca9187/a5fcf15089dc9d83-2b/s64x64u_c1/7ae26f5e7c311b9aeed44074a15c6c2fc25bfe40.jpg ",
     title: "Its his Day",
-    image: "https://64.media.tumblr.com/d80165f0cb09bf7b36617b4546f4cd07/20ff58da800c4a27-81/s1280x1920/f78b98bb82739de82812fb5752150af1c4a4bedb.pnj",
+    image:
+      "https://64.media.tumblr.com/d80165f0cb09bf7b36617b4546f4cd07/20ff58da800c4a27-81/s1280x1920/f78b98bb82739de82812fb5752150af1c4a4bedb.pnj",
     description: "it’s his day",
-  }
-]
+  },
+];
 
 export default function PaginaInicial() {
+  const navigate = useNavigate();
 
-  const [loggedIn, setLoggedIn] = useState(true);
+  useEffect(() => {
+    if (!localStorage.getItem("loggedIn")) {
+      navigate("/");
+    }
+  });
 
-    useEffect(() => {
-        if (!localStorage.getItem("loggedIn")) {
-          localStorage.setItem("loggedIn", false);
-        }
-      }, []);
+  const bosta = () => {
+    if (localStorage.getItem("loggedIn")) {
+      localStorage.setItem("loggedIn", false);
+      localStorage.clear();
+      navigate("/");
+    }
+  };
 
   return (
-  <div className='body'>
-    <MainNavigation />
-    <main>
-      <div className="posts"> 
+    <div className="body">
+      <MainNavigation />
+      <main>
+        <div className="posts">
+          <PostsLists postsImages={DUMMY_DATA} />
+        </div>
+        <div className="side">
+          <div className="make_post">
+            <MakePosts /> <br />
+          </div>
 
-      <PostsLists postsImages={DUMMY_DATA}/> 
-      
-      </div>
-      <div className="side">
-      <div className="make_post">
-        <MakePosts/> <br/>
-      </div>
-      
-      <div className="recomended">
-        <PostsListsRec postsImages={RECOMENDED_POST}/>
-        <button className={classes.makePost}>LOGOUT</button>
-      </div>
-      </div>
-    </main>
+          <div className="recomended">
+            <PostsListsRec postsImages={RECOMENDED_POST} />
+            <button className={classes.makePost} onClick={bosta}>
+              LOGOUT
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
