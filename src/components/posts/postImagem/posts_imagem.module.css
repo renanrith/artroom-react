@@ -49,6 +49,12 @@
   position: relative;
 }
 
+.icon:hover {
+  transform: scale(1.10);
+  height: 25px;
+  cursor: pointer;
+}
+
 .content {
   padding: 0;
   padding-right: 1rem;
