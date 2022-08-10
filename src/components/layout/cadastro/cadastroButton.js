@@ -22,6 +22,7 @@ export default function CadastroButton() {
         </button>
         { modalIsOpen && <CadastroPopup/> }
         { modalIsOpen && <Backdrop onClick={ClosePostHandler}/> }
+        { modalIsOpen && <CadastroPopup registrar={ClosePostHandler} /> }
         </div>
     )
 }
