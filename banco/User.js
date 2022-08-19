@@ -16,6 +16,7 @@ router.post("/registrar", (req, res) => {
     cadUsername,
     (err, results) => {
       if (results.length > 0) {
+        res.json({cadError: "Usuário já existe!"});
         console.log("ja tem burro");
       } else {
         if (cadConfirm == cadPassword) {
@@ -25,14 +26,17 @@ router.post("/registrar", (req, res) => {
             (err, results) => {
               if (err) {
                 console.log(err);
+                res.json({cadError: "porra"});
               } else {
                 console.log("registrado");
+                res.json({cadError: "Cadastro bem sucedido"});
                 res.send(results);
               }
             }
           );
         } else{
             console.log("senhas diferentes")
+            res.json({cadError: "Senhas diferentes"});
         }
       }
     }

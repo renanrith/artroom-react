@@ -1,5 +1,7 @@
 import Axios from "axios";
 import { useState } from "react";
+import Backdrop from "../post/backdrop";
+import CadastroButton from "./cadastroButton";
 import classes from "./cadastroPopUp.module.css";
 
 export default function CadastroPopup(props) {
@@ -8,21 +10,26 @@ export default function CadastroPopup(props) {
   const [cadEmail, setCadEmail] = useState("");
   const [cadPassword, setCadPassword] = useState("");
   const [cadConfirm, setCadConfirm] = useState("");
+  const [cadError, setCadError] = useState("");
 
   let cadErrorMessage;
 
-  const registrar = (props) => {
+function registrar(props){
     if (!cadNickname || !cadUsername || !cadEmail || !cadPassword || !cadConfirm) {
-      cadErrorMessage = "Campo não preenchido"
-    } else {
+      cadError = "Preencha todos os campos";
+    } else {    
       Axios.post("http://localhost:8080/user/registrar", {
         cadNickname: cadNickname,
         cadUsername: cadUsername,
         cadEmail: cadEmail,
         cadPassword: cadPassword,
         cadConfirm: cadConfirm,
+        cadError: cadError
+      }).then(res => {
+        console.log(res);
+        setCadError(res.data.cadError);
       });
-      
+
     }
     
   };
@@ -93,8 +100,8 @@ export default function CadastroPopup(props) {
         <br />
       </div>
       <div>
-        <h2 style={{ color: "red" }}>{cadErrorMessage} </h2>
-        <button onClick={registrar && props.registrar}>Cadastre-se</button>
+        <h2 style={{ color: "#ff73e8" }}>{cadError} </h2>
+        <button onClick={registrar}>Cadastre-se</button>
         <br />
       </div>
     </div>

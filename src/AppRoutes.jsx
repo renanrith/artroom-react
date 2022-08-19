@@ -21,7 +21,7 @@ const AppRoutes = () => {
                 <Route exact path="/" element={<PaginaLogin/>}/>
                 <Route exact path="/perfil" element={<Perfil/>}/>
                 <Route exact path="/home" element={<PaginaInicial/>}/>
-                <Route path='Market'/>
+                <Route path='/marketplace'/>
             </Routes>
         </>
     )

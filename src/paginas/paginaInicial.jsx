@@ -12,7 +12,7 @@ import "./paginainicial.css";
 
 const DUMMY_DATA = [
   {
-    id: "m1",
+    id: "1",
     user: "Renan",
     user_image:
       " https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg ",
@@ -22,23 +22,19 @@ const DUMMY_DATA = [
     type: "image",
   },
   {
-    id: "m2",
+    id: "2",
     user: "Leonardo DaVinci",
     user_image:
       "https://www.cartacapital.com.br/wp-content/uploads/2019/02/Kombo-Leonardo-Da-Vinci-und-Leonardo-di-Caprio.jpg",
     title: "The Ballad of Mona Lisa",
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
-<<<<<<< HEAD
     description:
       "Mona Lisa, yeah Pleased to please you Mona Lisa",
       type: "image",
-=======
-    description: "Mona Lisa, yeah Pleased to please you Mona Lisa",
->>>>>>> 8f89b293655b35b8a35d269d9a8b930d9f765c92
   },
   {
-    id: "m3",
+    id: "3",
     user: "dabin ",
     user_image:
       "https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2021/03/trollface-origem-significado-e-polemicas-em-torno-do-meme-960x596.jpg",
@@ -48,7 +44,17 @@ const DUMMY_DATA = [
     type: "image",
   },
   {
-  id: "m4",
+    id: "4",
+    user: "Fonte Confiavel ",
+    user_image:
+      "https://pbs.twimg.com/profile_images/1382901357959651329/WWyMrXzA_400x400.jpg",
+    title: "A CHINA SUMIU!!!!!!",
+    image: "https://pbs.twimg.com/media/Eo_9XFnW8AIKM6L?format=png&name=small ",
+    description: "Para mais noticias sigão @FConfiavel nas redes sociais", 
+    type: "image",
+  },
+  {
+  id: "5",
   user: "renan",
   user_image:
       " https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg ",
@@ -57,7 +63,7 @@ const DUMMY_DATA = [
   type: "text",
   },
   {
-    id: "m5",
+    id: "6",
     user: "xaybur",
     user_image:
         " https://i1.sndcdn.com/avatars-zFydfsGVr4u5cr1y-hWwYxw-original.jpg ",
@@ -111,7 +117,6 @@ export default function PaginaInicial() {
           <div className="make_post">
             <MakePosts /> <br />
           </div>
-
           <div className="recomended">
             <PostsListsRec postsImages={RECOMENDED_POST} />
             <button className={classes.makePost} onClick={bosta}>
