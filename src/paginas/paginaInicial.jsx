@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../contexto/auth";
+import Axios from "axios";
 
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
@@ -11,6 +11,13 @@ import PostsListsRec from "../components/posts/postImagem/recomended/posts_listR
 import "./paginainicial.css";
 
 const DUMMY_DATA = [
+  {
+    id: 1,
+    title: "Post 1",
+    description: 'oi',
+    user: "bryan",
+    type: "text"
+  },
   {
     id: "m1",
     user: "Renan",
@@ -29,13 +36,10 @@ const DUMMY_DATA = [
     title: "The Ballad of Mona Lisa",
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
-<<<<<<< HEAD
+
     description:
       "Mona Lisa, yeah Pleased to please you Mona Lisa",
       type: "image",
-=======
-    description: "Mona Lisa, yeah Pleased to please you Mona Lisa",
->>>>>>> 8f89b293655b35b8a35d269d9a8b930d9f765c92
   },
   {
     id: "m3",
@@ -85,12 +89,22 @@ const RECOMENDED_POST = [
 
 export default function PaginaInicial() {
   const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
       navigate("/");
     }
   });
+
+    useEffect (() => {
+    Axios.get("http://localhost:8080/upload/posts").then((res) => {
+      setPosts(res.data);
+      navigate("/home")
+    }
+  );
+  }
+  , []);
 
   const bosta = () => {
     if (localStorage.getItem("loggedIn")) {
@@ -100,12 +114,15 @@ export default function PaginaInicial() {
     }
   };
 
+  // fazer um useeffect pra identificar os posts
+  //sumir com o dummy data
+
   return (
     <div className="body">
       <MainNavigation />
       <main>
         <div className="posts">
-          <PostsLists postsImages={DUMMY_DATA} />
+          { <PostsLists postsImages={posts} /> /* mudar o dummy data  */}
         </div>
         <div className="side">
           <div className="make_post">
@@ -116,6 +133,9 @@ export default function PaginaInicial() {
             <PostsListsRec postsImages={RECOMENDED_POST} />
             <button className={classes.makePost} onClick={bosta}>
               LOGOUT
+            </button>
+            <button className={classes.makePost}>
+              porra
             </button>
           </div>
         </div>

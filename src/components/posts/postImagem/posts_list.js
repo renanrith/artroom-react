@@ -20,7 +20,7 @@ export default function PostsLists(props) {
         /> 
         )
        }
-       else if (postsImages.type === "text") { 
+       else if (postsImages.type === "text" || postsImages.type === "") { 
         return (
         <PostImage
           key={postsImages.id}

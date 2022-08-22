@@ -21,8 +21,8 @@ export default function CadastroPopup(props) {
         cadEmail: cadEmail,
         cadPassword: cadPassword,
         cadConfirm: cadConfirm,
-      });
-      
+      }
+      );
     }
     
   };
@@ -94,7 +94,7 @@ export default function CadastroPopup(props) {
       </div>
       <div>
         <h2 style={{ color: "red" }}>{cadErrorMessage} </h2>
-        <button onClick={registrar && props.registrar}>Cadastre-se</button>
+        <button onClick={registrar}>Cadastre-se</button>
         <br />
       </div>
     </div>

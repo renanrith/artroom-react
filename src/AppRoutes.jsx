@@ -11,10 +11,7 @@ import PaginaInicial from "./paginas/paginaInicial";
 import Perfil from "./paginas/perfil";
 import PaginaLogin from "./paginas/paginaLogin";
 
-import { AuthProvider, AuthContext } from './contexto/auth';
-
 const AppRoutes = () => {
-
     return(
         <> 
             <Routes>
