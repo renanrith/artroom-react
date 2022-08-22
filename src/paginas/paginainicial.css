@@ -28,11 +28,13 @@ main{
   }
   
   .side{
+    position: fixed;
     display: block;
+    right: 15%;
     float: right;
     height: 100%;
-    margin-left: 10vh;   
-    
+    margin-left: 10vh;
+    width: inherit;
   }
 
   .make_post{

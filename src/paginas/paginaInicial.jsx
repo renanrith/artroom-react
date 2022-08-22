@@ -100,7 +100,7 @@ export default function PaginaInicial() {
     useEffect (() => {
     Axios.get("http://localhost:8080/upload/posts").then((res) => {
       setPosts(res.data);
-      navigate("/home")
+      navigate("/")
     }
   );
   }

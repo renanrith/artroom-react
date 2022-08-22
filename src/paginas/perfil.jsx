@@ -1,13 +1,5 @@
 import classes from "./perfilcss.module.css"
 import chirio from "./../imagens/imgperfil/chirio.jpg";
-import bell_icon from "../imagens/MainNavigation/bell_icon.png";
-import profile_icon from "../imagens/MainNavigation/profile_icon.png";
-import Marketplace_Icon from "../imagens/MainNavigation/Marketplace_Icon.png";
-import logo_sem_titulo from "../imagens/MainNavigation/logo_sem_titulo.svg";
-import art3 from "./../imagens/imgperfil/artie3.jpg"
-import art7 from "./../imagens/imgperfil/artie7.jpg"
-import { Link } from "react-router-dom";
-import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import MainNavigation from "../components/layout/MainNavigation";
 
@@ -23,6 +15,7 @@ export default function Perfil(){
           title: "Artie",
           image: "https://img.freepik.com/fotos-gratis/foto-de-grande-angular-de-uma-unica-arvore-crescendo-sob-um-ceu-nublado-durante-um-por-do-sol-cercado-por-grama_181624-22807.jpg?w=2000",
           description: "eu adoro o artie",
+          type: "image",
         },
         {
             id: "m2",
@@ -32,6 +25,7 @@ export default function Perfil(){
             title: "Artie",
             image: "https://img.freepik.com/fotos-gratis/foto-de-grande-angular-de-uma-unica-arvore-crescendo-sob-um-ceu-nublado-durante-um-por-do-sol-cercado-por-grama_181624-22807.jpg?w=2000",
             description: "eu adoro o artie",
+            type: "image",
         },
       ];
 
@@ -61,6 +55,7 @@ return(
         <p className={classes.textoRosa}>Gosto muito de pintura digital e estou começando <br/> agr em 3D, me desejem sorte! ^^ </p>
         <a className={classes.btn}>Chat</a>
         </div>
+
     <PostsLists postsImages={DUMMY_DATA}/>
 
     </div>
