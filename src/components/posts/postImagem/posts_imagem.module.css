@@ -3,6 +3,9 @@
   background-color:#EBE4F9;
   box-shadow: 0 3px 6px black;
   overflow: hidden;
+  max-width: 35.375rem;
+  width:  35.375rem;
+  flex-direction: column-reverse;
 }
 
 .user{

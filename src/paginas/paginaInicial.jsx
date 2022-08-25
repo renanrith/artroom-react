@@ -100,7 +100,6 @@ export default function PaginaInicial() {
     useEffect (() => {
     Axios.get("http://localhost:8080/upload/posts").then((res) => {
       setPosts(res.data);
-      navigate("/")
     }
   );
   }
@@ -114,15 +113,12 @@ export default function PaginaInicial() {
     }
   };
 
-  // fazer um useeffect pra identificar os posts
-  //sumir com o dummy data
-
   return (
     <div className="body">
       <MainNavigation />
       <main>
         <div className="posts">
-          { <PostsLists postsImages={posts} /> /* mudar o dummy data  */}
+          { <PostsLists postsImages={posts.reverse()} /> /* mudar o dummy data  */}
         </div>
         <div className="side">
           <div className="make_post">
@@ -133,9 +129,6 @@ export default function PaginaInicial() {
             <PostsListsRec postsImages={RECOMENDED_POST} />
             <button className={classes.makePost} onClick={bosta}>
               LOGOUT
-            </button>
-            <button className={classes.makePost}>
-              porra
             </button>
           </div>
         </div>

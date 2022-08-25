@@ -16,6 +16,7 @@ export default function PostPopup(props){
       author: localStorage.getItem("username"),
       type : "text"
     });
+    window.location.reload()
   }
 
     return(

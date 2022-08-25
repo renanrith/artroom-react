@@ -29,7 +29,6 @@ function registrar(props){
       console.log(res);
       setCadError(res.data.cadError);
     });
-      cadError: cadError
 
     }
     
