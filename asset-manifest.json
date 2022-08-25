@@ -1,11 +1,9 @@
 {
   "files": {
-    "main.css": "/artroom-react/static/css/main.40a995c4.css",
-    "main.js": "/artroom-react/static/js/main.bf40893e.js",
+    "main.css": "/artroom-react/static/css/main.1730b5b7.css",
+    "main.js": "/artroom-react/static/js/main.d4adb2eb.js",
     "static/media/fundo.png": "/artroom-react/static/media/fundo.0653124588c565e425f9.png",
-    "static/media/artie3.jpg": "/artroom-react/static/media/artie3.1775371733617a7e485e.jpg",
     "static/media/fundo.jpg": "/artroom-react/static/media/fundo.79a1032b49261997c4cb.jpg",
-    "static/media/artie7.jpg": "/artroom-react/static/media/artie7.cc8199ecb063bf9fa975.jpg",
     "static/media/fotofundo_banner.jpg": "/artroom-react/static/media/fotofundo_banner.41d90df9de7108e87982.jpg",
     "static/media/logo.svg": "/artroom-react/static/media/logo.3fc02dfde967a8198bf949ff0be45452.svg",
     "static/media/logo_sem_titulo.svg": "/artroom-react/static/media/logo_sem_titulo.c8af9775bfe2dfa84b0e4d952d21c489.svg",
@@ -14,11 +12,11 @@
     "static/media/chirio.jpg": "/artroom-react/static/media/chirio.90c6d6f99ced9fb94811.jpg",
     "static/media/comment_icon.png": "/artroom-react/static/media/comment_icon.f415c9765e1e8098fc35.png",
     "index.html": "/artroom-react/index.html",
-    "main.40a995c4.css.map": "/artroom-react/static/css/main.40a995c4.css.map",
-    "main.bf40893e.js.map": "/artroom-react/static/js/main.bf40893e.js.map"
+    "main.1730b5b7.css.map": "/artroom-react/static/css/main.1730b5b7.css.map",
+    "main.d4adb2eb.js.map": "/artroom-react/static/js/main.d4adb2eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.40a995c4.css",
-    "static/js/main.bf40893e.js"
+    "static/css/main.1730b5b7.css",
+    "static/js/main.d4adb2eb.js"
   ]
 }
