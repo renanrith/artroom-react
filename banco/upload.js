@@ -36,4 +36,14 @@ router.get("/posts", (req, res) => {
 }
 );
 
+router.post("/perfilPost", (req, res) => {
+    const username = req.body.username;
+    db.query("SELECT * FROM uploads WHERE user = ?;", username, (err, results) => {
+        if (err) {
+            console.log(err);
+            console.log(nick)
+        } else {
+            res.json(results);
+}})});
+
 module.exports = router;

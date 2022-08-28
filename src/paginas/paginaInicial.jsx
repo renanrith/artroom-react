@@ -118,7 +118,7 @@ export default function PaginaInicial() {
       <MainNavigation />
       <main>
         <div className="posts">
-          { <PostsLists postsImages={posts.reverse()} /> /* mudar o dummy data  */}
+          { <PostsLists postsImages={posts.reverse()} /> }
         </div>
         <div className="side">
           <div className="make_post">

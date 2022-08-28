@@ -29,8 +29,7 @@ router.post("/registrar", (req, res) => {
                 res.json({cadError: "porra"});
               } else {
                 console.log("registrado");
-                res.json({cadError: "Cadastro bem sucedido"});
-                res.send(results);
+                res.json({cadError: "Cadastro bem sucedido", results: results});
               }
             }
           );
@@ -42,6 +41,24 @@ router.post("/registrar", (req, res) => {
     }
   );
 });
+
+router.post("/getInformations", (req, res) => {
+  const getUser = req.body.getUser;
+  db.query(
+    "SELECT * FROM usuarios WHERE usuario = ?;",
+    getUser, 
+    (err, results) => {
+      if (err) {
+        console.log(err)
+        console.log(getUser)
+      }
+      if (results.length > 0) {
+        res.send({nickname: results[0].nickname, 
+          usuario: results[0].usuario})
+        }
+    }  
+  )
+})
 
 router.post("/logar", (req, res) => {
   const username = req.body.username;
@@ -60,7 +77,7 @@ router.post("/logar", (req, res) => {
           const accessToken = jwt.sign({ id }, "sbggbgehtehnethnetuhtehuy", {
             expiresIn: "1w",
           });
-          res.json({ loggedIn: true, token: accessToken, result: results });
+          res.json({ loggedIn: true, token: accessToken, nick: results.nickname });
           console.log("logou");
         } else {
           res.json({ loggedIn: false, message: "Usuário ou senha incorretos" });

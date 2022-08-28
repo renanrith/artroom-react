@@ -3,8 +3,28 @@ import chirio from "./../imagens/imgperfil/chirio.jpg";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import MainNavigation from "../components/layout/MainNavigation";
 
-export default function Perfil(){
+import { useState } from "react";
+import Axios from 'axios';
+import { useEffect } from "react";
 
+export default function Perfil(){
+    const [nick, setNick] = useState([]);
+    const [perfilPosts, setPerfilPosts] = useState([]);
+
+    useEffect(() => {
+        Axios.post("http://localhost:8080/user/getInformations", {
+            getUser : localStorage.getItem("username")
+        }).then((res) => {
+        setNick(res.data.nickname);
+        }
+    )});
+
+    useEffect(() => {
+        Axios.post("http://localhost:8080/upload/perfilPost", {
+            username: localStorage.getItem("username")
+        }).then((res) => {
+        setPerfilPosts(res.data);
+        })});
 
     const DUMMY_DATA = [
         {
@@ -39,7 +59,10 @@ return(
             <div className={classes.top}>
 
                 <div className={classes.imgHeader}>
-                    <img src={chirio}/>
+                    <label htmlFor="file-input">
+                    <img src={chirio} />
+                    </label>
+                    <input id="file-input" type="file" />
                 </div>
 
             </div>
@@ -50,13 +73,13 @@ return(
 
     <div className={classes.bottom}>
         <div className={classes.bio}>
-        <h3 className={classes.textoBranco}>Rafaela</h3>
+        <h3 className={classes.textoBranco}>{nick}</h3>
         <h4 className={classes.textoBranco} >Designer Digital</h4>
         <p className={classes.textoRosa}>Gosto muito de pintura digital e estou começando <br/> agr em 3D, me desejem sorte! ^^ </p>
         <a className={classes.btn}>Chat</a>
         </div>
 
-    <PostsLists postsImages={DUMMY_DATA}/>
+    <PostsLists postsImages={perfilPosts}/>
 
     </div>
 </div>

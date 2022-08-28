@@ -3,6 +3,10 @@
     src: url(../imagens/fontes/coolvetica/coolvetica\ rg.otf);
 }
 
+.imgHeader>input {
+    display: none;
+}
+
 .background {
     background-color: #1D0924;;
     margin: 0;
@@ -69,6 +73,7 @@ header input {
     height: 155px;
     border-radius: 50%;
     transition: .1s ease;
+    cursor: pointer;
 }
 
 .imgHeader:hover {

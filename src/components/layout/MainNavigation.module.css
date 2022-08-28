@@ -28,6 +28,7 @@ body {
 
 .logo {
   height: 50px;
+  cursor: pointer;
 }
 
 nav ul {

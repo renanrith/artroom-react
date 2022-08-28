@@ -22,7 +22,6 @@ const PaginaLogin = () => {
         }).then((response) => {
             if(response.data.loggedIn){
                 localStorage.setItem("loggedIn", true);
-                localStorage.setItem("token", response.data.token);
                 localStorage.setItem("username", username);
                 navigate("/home");
             } else {
