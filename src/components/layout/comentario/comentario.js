@@ -22,7 +22,7 @@ export default function Comentario(props){
 */
 
 import Post from "../../ui/posts";
-import classes from "../../posts/postImagem/posts_imagem.module.css";
+import classes from "./comentario.module.css";
 
 export default function Coment(props) {
     

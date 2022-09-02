@@ -55,7 +55,7 @@
 
 .icon:hover {
   transform: scale(1.10);
-  height: 25px;
+  height: 20px;
   cursor: pointer;
 }
 

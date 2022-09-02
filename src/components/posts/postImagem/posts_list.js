@@ -20,7 +20,6 @@ export default function PostsLists(props) {
           type={postsImages.type}
           likes = {postsImages.likes}
         />
-        <button> oi </button>
         </div>
         )
        }
@@ -37,7 +36,6 @@ export default function PostsLists(props) {
           type={postsImages.type}
           likes = {postsImages.likes}
         /> 
-        <button id={postsImages.id} > oi </button>
         </div>
         )
        }

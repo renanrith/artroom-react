@@ -54,7 +54,7 @@
   }
   
   .content h3 {
-    font-size: 1.rem;
+    font-size: 1rem;
     color: black;
     margin: 5px;
   }
@@ -78,4 +78,22 @@
     margin: 0;
     padding: 0;
     
+  }
+
+  @media (max-width: 1500px){
+
+    .image {
+      width: 25rem;
+      padding-top: 0.3rem;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .image img {
+      max-width: auto;
+      max-height: 15rem;
+      margin-left: auto;
+    }
+    
+
   }

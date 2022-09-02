@@ -7,21 +7,24 @@ import ReactAudioPlayer from "react-audio-player";
 import ComentLists from "../../layout/comentario/comentList";
 import Axios from "axios";
 import { useState } from "react";
-
+import Coment from "../../layout/comentario/comentario";
 
 const blank_like = heart_icon;
 const clicked_like = heart_icon_red;
 const likes = { blank_like, clicked_like };
 
 
+
 export default function PostImage(props) {
   const [selected, setSelected] = useState(likes.blank_like);
   const [comments, setComments] = useState([]);
+  const [showComments, setShowComments] = useState(true);
+  
 
     Axios.post("http://localhost:8080/upload/comments").then((res) => {
     setComments(res.data)
   })
-
+    
   if (props.type === "image") {
   return (
     <li className={classes.item}>
@@ -73,7 +76,6 @@ export default function PostImage(props) {
           <div className={classes.user}>
           <img className={classes.userImage} alt={props.user} src={props.userImage} />
             <h3 className={classes.user}>
-  
               {props.user}
             </h3>
             {/* Post */}
@@ -84,22 +86,25 @@ export default function PostImage(props) {
             <p>{props.description}</p>
           </div>
           <div className={classes.actions}>
-            <button onClick={() => setSelected(!selected)}>
+            <button  id={props.id} onClick={() => setSelected(!selected)}>
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
               ) : (
                 <img className={classes.icon} src={clicked_like} alt="Like" />
               )}
             </button>
-            <button>
+            <button id={props.id} onClick={() => setShowComments(!showComments)}>
               <img
                 className={classes.icon}
                 src={comment_icon}
                 alt="Comentarios"
-
-              />
+              /> 
             </button>
-            <ComentLists comments={comments.reverse()}/>
+            {showComments ? (
+                null
+              ) : (
+                <ComentLists comments={comments.reverse()}/>
+              )}
           </div>
         </Post>
       </li>
@@ -160,6 +165,5 @@ export default function PostImage(props) {
           </div>
         </Post>
       </li>
-      )}
-  ;
+      )};
 }
