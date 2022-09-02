@@ -16,5 +16,12 @@ create table if not exists uploads(
     type varchar(5)
 );
 
+create table if not exists comment(
+	id int auto_increment primary key not null,
+    description varchar (235),
+    user varchar(255)
+);
+
+
 select * from uploads;
 select * from usuarios;
