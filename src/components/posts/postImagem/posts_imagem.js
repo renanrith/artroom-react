@@ -85,8 +85,10 @@ export default function PostImage(props) {
                 className={classes.icon}
                 src={comment_icon}
                 alt="Comentarios"
+
               />
             </button>
+            
           </div>
         </Post>
       </li>

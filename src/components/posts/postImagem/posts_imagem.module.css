@@ -10,7 +10,6 @@
   padding-right: 1rem;
   padding-left: 0.3rem;
   display: flex;
-  
 }
 
 .audio{
@@ -24,12 +23,11 @@
   border-radius: 50px;
 }
 
-
-
 .item {
   margin: 20px;
   background-color:#fff7fb;
   box-shadow: 0 3px 6px black;
+ 
 }
 
 .image {
@@ -42,6 +40,7 @@
 .image img {
   max-width: 34.375rem;
   height: auto;
+  width: 100%;
   margin-left: auto;
 }
 

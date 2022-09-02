@@ -6,7 +6,3 @@ create table usuarios(
     email varchar(45),
     senha varchar(16)
 );
-
-insert into usuarios (email, senha) values ('renan', '123') 
-
-select * from usuarios;

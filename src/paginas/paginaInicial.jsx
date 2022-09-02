@@ -9,6 +9,7 @@ import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
+import Comentario from "../components/layout/comentario/comentario";
 
 const DUMMY_DATA = [
   {
@@ -29,13 +30,10 @@ const DUMMY_DATA = [
     title: "The Ballad of Mona Lisa",
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
-<<<<<<< HEAD
     description:
       "Mona Lisa, yeah Pleased to please you Mona Lisa",
       type: "image",
-=======
-    description: "Mona Lisa, yeah Pleased to please you Mona Lisa",
->>>>>>> 8f89b293655b35b8a35d269d9a8b930d9f765c92
+
   },
   {
     id: "m3",
@@ -65,9 +63,7 @@ const DUMMY_DATA = [
     description: "xaybur no beat",
     audio: "https://soundcloud.com/xaybur/a-harbinger-arrives",
     type: "audio",
-    }
-  
-
+    },
 ];
 
 const RECOMENDED_POST = [
@@ -106,6 +102,7 @@ export default function PaginaInicial() {
       <main>
         <div className="posts">
           <PostsLists postsImages={DUMMY_DATA} />
+          <Comentario/>
         </div>
         <div className="side">
           <div className="make_post">
