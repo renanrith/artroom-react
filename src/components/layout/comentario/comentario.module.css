@@ -1,5 +1,5 @@
 .comentario{
-    width: 90%;
+    width: 100%;
     border: none;
     outline: none;
     border-top: 5px;
@@ -7,7 +7,7 @@
     font-size: 20px;
     font-family: coolvetica;
     resize: none;
-    max-width: 34.375rem;
+    
    height: auto;
    width: 100%;
    margin-left: auto;
@@ -25,8 +25,17 @@
 .fundo{
   background-color: #fff7fb;
   box-shadow: 0 3px 6px black;
-  max-width: 38.75rem;
+  min-width: 34.375rem;
   padding-top: 0.3rem;
   overflow: hidden;
-  text-align: center;
 }
+
+@media (max-width: 900px){
+
+  .fundo{
+    min-width: 24rem;
+    width: 24rem;
+    
+  }
+  
+  }

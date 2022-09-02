@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .bio{

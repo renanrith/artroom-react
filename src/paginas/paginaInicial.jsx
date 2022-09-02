@@ -10,6 +10,7 @@ import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
 import Comentario from "../components/layout/comentario/comentario";
+import ComentLists from "../components/layout/comentario/comentList";
 
 const DUMMY_DATA = [
   {
@@ -89,7 +90,7 @@ const RECOMENDED_POST = [
 export default function PaginaInicial() {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
-
+  
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
       navigate("/");
@@ -99,8 +100,7 @@ export default function PaginaInicial() {
     useEffect (() => {
     Axios.get("http://localhost:8080/upload/posts").then((res) => {
       setPosts(res.data);
-    }
-  );
+    })
   }
   , []);
 
@@ -118,6 +118,7 @@ export default function PaginaInicial() {
       <main>
         <div className="posts">
           { <PostsLists postsImages={posts.reverse()} /> }
+         
         </div>
         <div className="side">
           <div className="make_post">

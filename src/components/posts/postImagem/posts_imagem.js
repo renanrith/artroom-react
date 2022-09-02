@@ -3,15 +3,25 @@ import classes from "./posts_imagem.module.css";
 import comment_icon from "../../../imagens/posts/comment_icon.png";
 import heart_icon from "../../../imagens/posts/heart_icon.png";
 import heart_icon_red from "../../../imagens/posts/heart_icon_red.png";
-import { useState } from "react";
 import ReactAudioPlayer from "react-audio-player";
+import ComentLists from "../../layout/comentario/comentList";
+import Axios from "axios";
+import { useState } from "react";
+
 
 const blank_like = heart_icon;
 const clicked_like = heart_icon_red;
 const likes = { blank_like, clicked_like };
 
+
 export default function PostImage(props) {
   const [selected, setSelected] = useState(likes.blank_like);
+  const [comments, setComments] = useState([]);
+
+    Axios.post("http://localhost:8080/upload/comments").then((res) => {
+    setComments(res.data)
+  })
+
   if (props.type === "image") {
   return (
     <li className={classes.item}>
@@ -50,6 +60,7 @@ export default function PostImage(props) {
               alt="Comentarios"
             />
           </button>
+          <ComentLists comments={comments.reverse()}/>
         </div>
       </Post>
     </li>
@@ -88,7 +99,7 @@ export default function PostImage(props) {
 
               />
             </button>
-            
+            <ComentLists comments={comments.reverse()}/>
           </div>
         </Post>
       </li>

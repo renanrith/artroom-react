@@ -8,6 +8,7 @@ export default function PostsLists(props) {
       {props.postsImages.map((postsImages) => {
        if (postsImages.type === "image") { 
         return (
+        <div>
         <PostImage
           key={postsImages.id}
           id={postsImages.id}
@@ -17,11 +18,15 @@ export default function PostsLists(props) {
           title={postsImages.title}
           description={postsImages.description}
           type={postsImages.type}
-        /> 
+          likes = {postsImages.likes}
+        />
+        <button> oi </button>
+        </div>
         )
        }
        else if (postsImages.type === "text" || postsImages.type === "") { 
         return (
+        <div>
         <PostImage
           key={postsImages.id}
           id={postsImages.id}
@@ -30,7 +35,10 @@ export default function PostsLists(props) {
           title={postsImages.title}
           description={postsImages.description}
           type={postsImages.type}
+          likes = {postsImages.likes}
         /> 
+        <button id={postsImages.id} > oi </button>
+        </div>
         )
        }
        else if (postsImages.type === "audio") { 
@@ -43,6 +51,7 @@ export default function PostsLists(props) {
           title={postsImages.title}
           description={postsImages.description}
           type={postsImages.type}
+          likes = {postsImages.likes}
         /> 
         )
        }

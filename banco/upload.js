@@ -36,6 +36,18 @@ router.get("/posts", (req, res) => {
 }
 );
 
+router.post("/comments", (req, res) => {
+    db.query("select * from comment",
+    (err, results) => {
+        if (err){
+            console.log(err)
+        } else {
+            res.send(results)
+        }
+    })
+
+})
+
 router.post("/perfilPost", (req, res) => {
     const username = req.body.username;
     db.query("SELECT * FROM uploads WHERE user = ?;", username, (err, results) => {
