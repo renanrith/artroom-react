@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../contexto/auth";
+import Axios from "axios";
 
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
@@ -12,6 +12,13 @@ import "./paginainicial.css";
 import Comentario from "../components/layout/comentario/comentario";
 
 const DUMMY_DATA = [
+  {
+    id: 1,
+    title: "Post 1",
+    description: 'oi',
+    user: "bryan",
+    type: "text"
+  },
   {
     id: "m1",
     user: "Renan",
@@ -30,10 +37,10 @@ const DUMMY_DATA = [
     title: "The Ballad of Mona Lisa",
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
+
     description:
       "Mona Lisa, yeah Pleased to please you Mona Lisa",
       type: "image",
-
   },
   {
     id: "m3",
@@ -81,12 +88,21 @@ const RECOMENDED_POST = [
 
 export default function PaginaInicial() {
   const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
       navigate("/");
     }
   });
+
+    useEffect (() => {
+    Axios.get("http://localhost:8080/upload/posts").then((res) => {
+      setPosts(res.data);
+    }
+  );
+  }
+  , []);
 
   const bosta = () => {
     if (localStorage.getItem("loggedIn")) {
@@ -101,8 +117,7 @@ export default function PaginaInicial() {
       <MainNavigation />
       <main>
         <div className="posts">
-          <PostsLists postsImages={DUMMY_DATA} />
-          <Comentario/>
+          { <PostsLists postsImages={posts.reverse()} /> }
         </div>
         <div className="side">
           <div className="make_post">

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import bell_icon from "../../imagens/MainNavigation/bell_icon.png";
@@ -14,7 +14,14 @@ import ResponsiveMenu from "./responsiveMenu";
 
 
 function MainNavigation() {
+const navigate = useNavigate();
   const [search, setSearch] = useState("");
+
+  const logo = () => {
+    navigate("/home");
+    window.location.reload();
+    };
+
   return (
     <div className={classes.header_container}>
       <header>
@@ -48,7 +55,7 @@ function MainNavigation() {
             </li>
             <li>
               {" "}
-              <Link to="/profile">
+              <Link to="/marketplace">
                 {" "}
                 <img
                   draggable="false"
@@ -63,17 +70,14 @@ function MainNavigation() {
         <div className={classes.search}>
           <BarraPesquisa data={Names}/>
         </div>
-        <div className={classes.logo}>
+        <div className={classes.logo} onClick={logo}>
           {" "}
-          <Link to="/home">
-            {" "}
             <img
               draggable="false"
               src={logo_sem_titulo}
               className={classes.logo}
               alt="Logo ArtRoom"
             />{" "}
-          </Link>{" "}
         </div>
       </header>
     </div>

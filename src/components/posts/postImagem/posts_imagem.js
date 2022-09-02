@@ -54,7 +54,7 @@ export default function PostImage(props) {
       </Post>
     </li>
   )}
-  else if (props.type === "text") {
+  else if (props.type === "text" || props.type === "") {
     return (
       <li className={classes.item}>
         <Post>

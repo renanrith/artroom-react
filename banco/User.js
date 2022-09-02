@@ -16,6 +16,7 @@ router.post("/registrar", (req, res) => {
     cadUsername,
     (err, results) => {
       if (results.length > 0) {
+        res.json({cadError: "Usuário já existe!"});
         console.log("ja tem burro");
       } else {
         if (cadConfirm == cadPassword) {
@@ -25,19 +26,39 @@ router.post("/registrar", (req, res) => {
             (err, results) => {
               if (err) {
                 console.log(err);
+                res.json({cadError: "porra"});
               } else {
                 console.log("registrado");
-                res.send(results);
+                res.json({cadError: "Cadastro bem sucedido", results: results});
               }
             }
           );
         } else{
             console.log("senhas diferentes")
+            res.json({cadError: "Senhas diferentes"});
         }
       }
     }
   );
 });
+
+router.post("/getInformations", (req, res) => {
+  const getUser = req.body.getUser;
+  db.query(
+    "SELECT * FROM usuarios WHERE usuario = ?;",
+    getUser, 
+    (err, results) => {
+      if (err) {
+        console.log(err)
+        console.log(getUser)
+      }
+      if (results.length > 0) {
+        res.send({nickname: results[0].nickname, 
+          usuario: results[0].usuario})
+        }
+    }  
+  )
+})
 
 router.post("/logar", (req, res) => {
   const username = req.body.username;
@@ -56,7 +77,7 @@ router.post("/logar", (req, res) => {
           const accessToken = jwt.sign({ id }, "sbggbgehtehnethnetuhtehuy", {
             expiresIn: "1w",
           });
-          res.json({ loggedIn: true, token: accessToken, result: results });
+          res.json({ loggedIn: true, token: accessToken, nick: results.nickname });
           console.log("logou");
         } else {
           res.json({ loggedIn: false, message: "Usuário ou senha incorretos" });
