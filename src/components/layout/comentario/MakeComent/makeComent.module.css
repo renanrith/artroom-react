@@ -1,0 +1,42 @@
+.comentario{
+    border: none;
+    outline: none;
+    border-top: 5px;
+    padding-left: 5px;
+    font-size: 20px;
+    font-family: coolvetica;
+    resize: none;
+    height: auto;
+    width: 70%;
+    margin-left: auto;
+  }
+
+.post{
+  align-self: center;
+  margin-left: 8%;
+  text-align: center;
+  border: 0px;
+  height: 30px;
+  border-top: -10%;
+  border-radius: 10px;
+  background-color: #8d41ac;
+}
+
+.userName{
+  padding-left: 0.5rem;
+}
+
+.fundo{
+  background-color: #fff7fb;
+  min-width: 34.375rem;
+  padding-top: 0.3rem;
+  overflow: hidden;
+}
+
+@media (max-width: 900px){
+
+  .fundo{
+    min-width: 24rem;
+    width: 24rem;
+  }
+  }

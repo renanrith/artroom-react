@@ -5,12 +5,10 @@ import Axios from "axios";
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
 import classes from "../components/layout/Make_post.module.css";
-import PostsAudioList from "../components/posts/postAudio/postAudioList";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
-import Comentario from "../components/layout/comentario/comentario";
-import ComentLists from "../components/layout/comentario/comentList";
+
 
 const DUMMY_DATA = [
   {

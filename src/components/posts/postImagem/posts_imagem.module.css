@@ -77,12 +77,11 @@
 
 .actions {  
   width: 100%;
-  padding: 0.5rem;
   text-align:left;
 }
 
 
-.actions button {
+.interact {
   font: inherit;
   cursor: pointer;
   background-color: transparent;

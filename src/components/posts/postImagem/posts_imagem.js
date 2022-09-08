@@ -8,6 +8,7 @@ import ComentLists from "../../layout/comentario/comentList";
 import Axios from "axios";
 import { useState } from "react";
 import Coment from "../../layout/comentario/comentario";
+import MakeComent from "../../layout/comentario/MakeComent/makeComent";
 
 const blank_like = heart_icon;
 const clicked_like = heart_icon_red;
@@ -86,14 +87,14 @@ export default function PostImage(props) {
             <p>{props.description}</p>
           </div>
           <div className={classes.actions}>
-            <button  id={props.id} onClick={() => setSelected(!selected)}>
+            <button className={classes.interact}  id={props.id} onClick={() => setSelected(!selected)}>
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
               ) : (
                 <img className={classes.icon} src={clicked_like} alt="Like" />
               )}
             </button>
-            <button id={props.id} onClick={() => setShowComments(!showComments)}>
+            <button className={classes.interact} id={props.id} onClick={() => setShowComments(!showComments)}>
               <img
                 className={classes.icon}
                 src={comment_icon}
@@ -102,9 +103,10 @@ export default function PostImage(props) {
             </button>
             {showComments ? (
                 null
-              ) : (
-                <ComentLists comments={comments.reverse()}/>
+              ) : ( 
+                <><MakeComent /><ComentLists comments={comments.reverse()} /></>
               )}
+              
           </div>
         </Post>
       </li>

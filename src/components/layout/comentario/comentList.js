@@ -1,7 +1,5 @@
 import Coment from "./comentario";
 import classes from "./comentList.module.css";
-import PostImage from "../../posts/postImagem/posts_imagem";
-import { useState } from "react";
 
 export default function ComentLists(props) {
 
