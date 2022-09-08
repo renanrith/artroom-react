@@ -13,17 +13,18 @@
 
 .post{
   align-self: center;
-  margin-left: 8%;
+  margin-left: 5%;
   text-align: center;
   border: 0px;
   height: 30px;
-  border-top: -10%;
+  width: 20%;
   border-radius: 10px;
   background-color: #8d41ac;
+  vertical-align: 1rem;
 }
 
-.userName{
-  padding-left: 0.5rem;
+.post:hover{
+  background-color: #ba60dd;
 }
 
 .fundo{
@@ -38,5 +39,12 @@
   .fundo{
     min-width: 24rem;
     width: 24rem;
+  }
+
+  .post{
+   width: 30%;
+  }
+  .comentario{
+    width: 100%;
   }
   }
