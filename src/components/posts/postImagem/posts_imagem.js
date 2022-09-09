@@ -6,23 +6,58 @@ import heart_icon_red from "../../../imagens/posts/heart_icon_red.png";
 import ReactAudioPlayer from "react-audio-player";
 import ComentLists from "../../layout/comentario/comentList";
 import Axios from "axios";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MakeComent from "../../layout/comentario/MakeComent/makeComent";
 import ReactPlayer from 'react-player'
-
+import { AiOutlineSafety } from "react-icons/ai";
 
 const blank_like = heart_icon;
 const clicked_like = heart_icon_red;
 const likes = { blank_like, clicked_like };
 
 export default function PostImage(props) {
+
+  const ref = useRef(null);
+
   const [selected, setSelected] = useState(likes.blank_like);
   const [comments, setComments] = useState([]);
   const [showComments, setShowComments] = useState(true);
+  const [uploads, setUploads] = useState([]);
 
-  Axios.post("http://localhost:8080/upload/comments").then((res) => {
+
+  useEffect(() => { Axios.get("http://localhost:8080/upload/posts").then((res) => {
+    setUploads(res.data);
+  })}, []);
+
+
+  Axios.post("http://localhost:8080/upload/showComments").then((res) => {
     setComments(res.data);
   });
+
+  const handleComment = (id) => {
+    setShowComments(!showComments)
+    Axios.post("http://localhost:8080/upload/insertComments", {
+      id: id
+    });
+  };
+
+  const handleLike = (id) => {
+    var postid = id - 1;
+
+    var tempLikes = uploads;
+    console.log(tempLikes);
+    console.log(postid)
+
+    tempLikes[postid].likes = tempLikes[postid].likes + 1;
+
+    Axios.post("http://localhost:8080/upload/like", {
+      user: localStorage.getItem("username"),
+      id: id
+    });
+    setSelected(!selected);
+    console.log(tempLikes[postid].likes)
+  };
+
 
   if (props.type === "image") {
     return (
@@ -49,9 +84,10 @@ export default function PostImage(props) {
           </div>
           <div className={classes.actions}>
             <button
+              ref={ref}
               className={classes.interact}
               id={props.id}
-              onClick={() => setSelected(!selected)}
+              onClick={() => handleLike(this.id)}
             >
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
@@ -62,7 +98,7 @@ export default function PostImage(props) {
             <button
               className={classes.interact}
               id={props.id}
-              onClick={() => setShowComments(!showComments)}
+              onClick={() => handleComment(props.id)}
             >
               <img
                 className={classes.icon}
@@ -101,9 +137,10 @@ export default function PostImage(props) {
           </div>
           <div className={classes.actions}>
             <button
+              ref={ref}
               className={classes.interact}
               id={props.id}
-              onClick={() => setSelected(!selected)}
+              onClick={() => handleLike(props.id)}
             >
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
@@ -114,7 +151,7 @@ export default function PostImage(props) {
             <button
               className={classes.interact}
               id={props.id}
-              onClick={() => setShowComments(!showComments)}
+              onClick={() => handleComment(props.id)}
             >
               <img
                 className={classes.icon}
@@ -156,9 +193,10 @@ export default function PostImage(props) {
           </div>
           <div className={classes.actions}>
             <button
+              ref={ref}
               className={classes.interact}
               id={props.id}
-              onClick={() => setSelected(!selected)}
+              onClick={() => handleLike}
             >
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
@@ -169,7 +207,7 @@ export default function PostImage(props) {
             <button
               className={classes.interact}
               id={props.id}
-              onClick={() => setShowComments(!showComments)}
+              onClick={() => handleComment(props.id)}
             >
               <img
                 className={classes.icon}
@@ -212,9 +250,10 @@ export default function PostImage(props) {
           </div>
           <div className={classes.actions}>
             <button
+              ref={ref}
               className={classes.interact}
               id={props.id}
-              onClick={() => setSelected(!selected)}
+              onClick={() => handleLike(  )}
             >
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
@@ -225,7 +264,7 @@ export default function PostImage(props) {
             <button
               className={classes.interact}
               id={props.id}
-              onClick={() => setShowComments(!showComments)}
+              onClick={() => handleComment(props.id)}
             >
               <img
                 className={classes.icon}

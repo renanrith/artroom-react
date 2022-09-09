@@ -11,13 +11,6 @@ import "./paginainicial.css";
 
 const DUMMY_DATA = [
   {
-    id: 1,
-    title: "Post 1",
-    description: "oi",
-    user: "bryan",
-    type: "text",
-  },
-  {
     id: "m1",
     user: "Renan",
     user_image:
@@ -123,10 +116,10 @@ export default function PaginaInicial() {
       <main>
         <div className="posts">
           {
-            <PostsLists
-              /* postsImages={posts.reverse()} /> */ postsImages={DUMMY_DATA}
-            />
+            
+              <PostsLists postsImages={posts.reverse()} />
           }
+
         </div>
         <div className="side">
           <div className="make_post">

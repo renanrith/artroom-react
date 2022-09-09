@@ -12,7 +12,7 @@ export default function ComentLists(props) {
               idComent={comments.idComent}
               user={comments.user}
               userImage={comments.user_image}
-              description={comments.description}
+              texto={comments.texto}
             />
           </div>
         );

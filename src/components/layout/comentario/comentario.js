@@ -16,7 +16,7 @@ export default function Coment(props) {
           {/* Post */}
         </div>
         <div className={classes.content}>
-          <p>{props.description}</p>
+          <p>{props.texto}</p>
         </div>
         <div className={classes.actions}></div>
       </Post>
