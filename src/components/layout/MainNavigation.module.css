@@ -46,7 +46,6 @@ hr {
 }
 
 .header_container {
-  
   position: sticky;
   top: 0;
   background-color: #1d0924;
@@ -125,7 +124,6 @@ header input {
     width: 90%;
     background-color: #1d0924;
     overflow: hidden;
-
   }
 
   header nav {
@@ -136,7 +134,7 @@ header input {
     height: 40px;
   }
 
-  .search{
+  .search {
     display: none;
   }
 

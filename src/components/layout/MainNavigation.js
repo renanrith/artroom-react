@@ -5,27 +5,25 @@ import bell_icon from "../../imagens/MainNavigation/bell_icon.png";
 import profile_icon from "../../imagens/MainNavigation/profile_icon.png";
 import Marketplace_Icon from "../../imagens/MainNavigation/Marketplace_Icon.png";
 import logo_sem_titulo from "../../imagens/MainNavigation/logo_sem_titulo.svg";
-import Names from './MOCK_DATA.json';
+import Names from "./MOCK_DATA.json";
 import BarraPesquisa from "./searchBar.js";
 
 import classes from "./MainNavigation.module.css";
 import ResponsiveMenu from "./responsiveMenu";
 
-
-
 function MainNavigation() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
   const logo = () => {
     navigate("/home");
     window.location.reload();
-    };
+  };
 
   return (
     <div className={classes.header_container}>
       <header>
-      <ResponsiveMenu/>
+        <ResponsiveMenu />
 
         <nav>
           <ul>
@@ -68,16 +66,16 @@ const navigate = useNavigate();
           </ul>
         </nav>
         <div className={classes.search}>
-          <BarraPesquisa data={Names}/>
+          <BarraPesquisa data={Names} />
         </div>
         <div className={classes.logo} onClick={logo}>
           {" "}
-            <img
-              draggable="false"
-              src={logo_sem_titulo}
-              className={classes.logo}
-              alt="Logo ArtRoom"
-            />{" "}
+          <img
+            draggable="false"
+            src={logo_sem_titulo}
+            className={classes.logo}
+            alt="Logo ArtRoom"
+          />{" "}
         </div>
       </header>
     </div>

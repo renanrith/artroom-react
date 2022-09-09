@@ -1,14 +1,11 @@
-/*  
-*/
-
 .item {
   overflow: hidden;
   max-width: 34.375rem;
-  width:  34.375rem;
+  width: 34.375rem;
   margin-bottom: 10px;
 }
 
-.user{
+.user {
   padding: 0;
   margin-bottom: 0.1rem;
   padding-right: 1rem;
@@ -16,8 +13,7 @@
   display: flex;
 }
 
-
-.userImage{
+.userImage {
   margin-top: 5px;
   height: 50px;
   width: 50px;
@@ -25,7 +21,7 @@
 }
 
 .item {
-  background-color:#fff7fb;
+  background-color: #fff7fb;
 }
 
 .content {
@@ -34,7 +30,7 @@
   padding-left: 1rem;
 }
 
-.content p{
+.content p {
   margin: 5px;
 }
 
@@ -44,16 +40,13 @@
   margin: 5px;
 }
 ul {
-  list-style-type:none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  
 }
 
-@media (max-width: 900px){
-
-.item{
-  width: 24rem;
-}
-
+@media (max-width: 900px) {
+  .item {
+    width: 24rem;
+  }
 }

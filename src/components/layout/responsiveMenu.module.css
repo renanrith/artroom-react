@@ -2,7 +2,7 @@
   display: none;
 }
 
-.navMenu{
+.navMenu {
   display: none;
 }
 
@@ -46,8 +46,6 @@
     transition: 350ms;
     overflow: hidden;
   }
-
-  
 
   .navText {
     display: flex;

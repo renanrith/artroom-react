@@ -1,10 +1,10 @@
 import classes from "./makeComent.module.css";
 
-export default function MakeComent(props){
-    return(
-        <div>
-        <div className={classes.fundo}>
-            <textarea
+export default function MakeComent(props) {
+  return (
+    <div>
+      <div className={classes.fundo}>
+        <textarea
           className={classes.comentario}
           type="text"
           name="Descricao"
@@ -14,7 +14,7 @@ export default function MakeComent(props){
           autoCapitalize="On"
         />
         <button className={classes.post}>Comentar</button>
-        </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }

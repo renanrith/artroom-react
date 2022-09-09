@@ -1,13 +1,13 @@
 .item {
   margin: 20px;
-  background-color:#EBE4F9;
+  background-color: #ebe4f9;
   box-shadow: 0 3px 6px black;
   overflow: hidden;
   max-width: 35.375rem;
-  width:  35.375rem;
+  width: 35.375rem;
 }
 
-.user{
+.user {
   padding: 0;
   margin-bottom: 0.1rem;
   padding-right: 1rem;
@@ -15,11 +15,23 @@
   display: flex;
 }
 
-.audio{
+.audio {
   width: 100%;
 }
 
-.userImage{
+.video{
+  max-width: 38.75rem;
+  position:inherit;
+  height: 360px;
+  padding-bottom: 5px;
+}
+
+.videoPlay{
+  padding-left: 1%;
+  width: 34.375rem;
+}
+
+.userImage {
   margin-top: 5px;
   height: 50px;
   width: 50px;
@@ -28,9 +40,8 @@
 
 .item {
   margin: 20px;
-  background-color:#fff7fb;
+  background-color: #fff7fb;
   box-shadow: 0 3px 6px black;
- 
 }
 
 .image {
@@ -48,13 +59,12 @@
 }
 
 .icon {
-  
   height: 20px;
   position: relative;
 }
 
 .icon:hover {
-  transform: scale(1.10);
+  transform: scale(1.1);
   height: 20px;
   cursor: pointer;
 }
@@ -65,7 +75,7 @@
   padding-left: 1rem;
 }
 
-.content p{
+.content p {
   margin: 5px;
 }
 
@@ -75,11 +85,10 @@
   margin: 5px;
 }
 
-.actions {  
+.actions {
   width: 100%;
-  text-align:left;
+  text-align: left;
 }
-
 
 .interact {
   font: inherit;
@@ -89,16 +98,13 @@
 }
 
 ul {
-  list-style-type:none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  
 }
 
-@media (max-width: 900px){
-
-.item{
-  width: 24rem;
-}
-
+@media (max-width: 900px) {
+  .item {
+    width: 24rem;
+  }
 }

@@ -9,14 +9,13 @@ import PostsLists from "../components/posts/postImagem/posts_list";
 import PostsListsRec from "../components/posts/postImagem/recomended/posts_listRec";
 import "./paginainicial.css";
 
-
 const DUMMY_DATA = [
   {
     id: 1,
     title: "Post 1",
-    description: 'oi',
+    description: "oi",
     user: "bryan",
-    type: "text"
+    type: "text",
   },
   {
     id: "m1",
@@ -37,9 +36,8 @@ const DUMMY_DATA = [
     image:
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
 
-    description:
-      "Mona Lisa, yeah Pleased to please you Mona Lisa",
-      type: "image",
+    description: "Mona Lisa, yeah Pleased to please you Mona Lisa",
+    type: "image",
   },
   {
     id: "m3",
@@ -48,28 +46,38 @@ const DUMMY_DATA = [
       "https://d5y9g7a5.rocketcdn.me/wp-content/uploads/2021/03/trollface-origem-significado-e-polemicas-em-torno-do-meme-960x596.jpg",
     title: "peter griffin sans",
     image: " https://i.ytimg.com/vi/QhbNw2YHDw0/maxresdefault.jpg ",
-    description: "socorro", 
+    description: "socorro",
     type: "image",
   },
   {
-  id: "m4",
-  user: "renan",
-  user_image:
+    id: "m4",
+    user: "renan",
+    user_image:
       " https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg ",
-  title: "oi gente",
-  description: "sera que funcionou",
-  type: "text",
+    title: "oi gente",
+    description: "sera que funcionou",
+    type: "text",
   },
   {
     id: "m5",
     user: "xaybur",
     user_image:
-        " https://i1.sndcdn.com/avatars-zFydfsGVr4u5cr1y-hWwYxw-original.jpg ",
+      " https://i1.sndcdn.com/avatars-zFydfsGVr4u5cr1y-hWwYxw-original.jpg ",
     title: "A Harbinger Arrives",
     description: "xaybur no beat",
     audio: "https://soundcloud.com/xaybur/a-harbinger-arrives",
     type: "audio",
-    },
+  },
+  {
+    id: "m6",
+    user: "Kappo",
+    user_image:
+      " https://yt3.ggpht.com/ytc/AMLnZu-gJ9svbPEGqQmk_vhlFLybRt4yYfmv4ljypxgK=s88-c-k-c0x00ffffff-no-rj ",
+    title: "Mario Party: O fim da festa",
+    description: "Acabou a festa :(",
+    video: "https://www.youtube.com/watch?v=XjNAY-hbLqg",
+    type: "video",
+  },
 ];
 
 const RECOMENDED_POST = [
@@ -88,19 +96,18 @@ const RECOMENDED_POST = [
 export default function PaginaInicial() {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
-  
+
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
       navigate("/");
     }
   });
 
-    useEffect (() => {
+  useEffect(() => {
     Axios.get("http://localhost:8080/upload/posts").then((res) => {
       setPosts(res.data);
-    })
-  }
-  , []);
+    });
+  }, []);
 
   const bosta = () => {
     if (localStorage.getItem("loggedIn")) {
@@ -115,8 +122,11 @@ export default function PaginaInicial() {
       <MainNavigation />
       <main>
         <div className="posts">
-          { <PostsLists postsImages={posts.reverse()} /> }
-         
+          {
+            <PostsLists
+              /* postsImages={posts.reverse()} /> */ postsImages={DUMMY_DATA}
+            />
+          }
         </div>
         <div className="side">
           <div className="make_post">

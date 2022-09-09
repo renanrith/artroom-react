@@ -1,17 +1,17 @@
-.comentario{
-    border: none;
-    outline: none;
-    border-top: 5px;
-    padding-left: 5px;
-    font-size: 20px;
-    font-family: coolvetica;
-    resize: none;
-    height: auto;
-    width: 70%;
-    margin-left: auto;
-  }
+.comentario {
+  border: none;
+  outline: none;
+  border-top: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: coolvetica;
+  resize: none;
+  height: auto;
+  width: 70%;
+  margin-left: auto;
+}
 
-.post{
+.post {
   align-self: center;
   margin-left: 5%;
   text-align: center;
@@ -23,28 +23,27 @@
   vertical-align: 1rem;
 }
 
-.post:hover{
+.post:hover {
   background-color: #ba60dd;
 }
 
-.fundo{
+.fundo {
   background-color: #fff7fb;
   min-width: 34.375rem;
   padding-top: 0.3rem;
   overflow: hidden;
 }
 
-@media (max-width: 900px){
-
-  .fundo{
+@media (max-width: 900px) {
+  .fundo {
     min-width: 24rem;
     width: 24rem;
   }
 
-  .post{
-   width: 30%;
+  .post {
+    width: 30%;
   }
-  .comentario{
+  .comentario {
     width: 100%;
   }
-  }
+}
