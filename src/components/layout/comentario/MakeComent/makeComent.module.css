@@ -21,6 +21,8 @@
   border-radius: 10px;
   background-color: #8d41ac;
   vertical-align: 1rem;
+  color: aliceblue;
+  font-weight:bolder;
 }
 
 .post:hover {
