@@ -23,37 +23,30 @@ export default function PostImage(props) {
   const [comments, setComments] = useState([]);
   const [showComments, setShowComments] = useState(true);
   const [uploads, setUploads] = useState([]);
+  const [comment, setComment] = useState("");
 
 
   useEffect(() => { Axios.get("http://localhost:8080/upload/posts").then((res) => {
     setUploads(res.data);
   })}, []);
 
-
-  Axios.post("http://localhost:8080/upload/showComments").then((res) => {
-    setComments(res.data);
-  });
-
   const handleComment = (id) => {
     setShowComments(!showComments)
-    Axios.post("http://localhost:8080/upload/insertComments", {
-      id: id
-    });
+    Axios.post("http://localhost:8080/upload/showComments").then((res) => {
+      setComments(res.data);
+    })
   };
 
   const handleLike = (id) => {
     var postid = id - 1;
 
     var tempLikes = uploads;
-    console.log(tempLikes);
-    console.log(postid)
-
     tempLikes[postid].likes = tempLikes[postid].likes + 1;
 
     Axios.post("http://localhost:8080/upload/like", {
       user: localStorage.getItem("username"),
       id: id
-    });
+    })
     setSelected(!selected);
     console.log(tempLikes[postid].likes)
   };
@@ -87,13 +80,17 @@ export default function PostImage(props) {
               ref={ref}
               className={classes.interact}
               id={props.id}
-              onClick={() => handleLike(this.id)}
+              onClick={() => handleLike(props.id)}
             >
               {selected ? (
                 <img className={classes.icon} src={blank_like} alt="Like" />
+                
               ) : (
                 <img className={classes.icon} src={clicked_like} alt="Like" />
               )}
+
+
+              
             </button>
             <button
               className={classes.interact}
@@ -147,6 +144,7 @@ export default function PostImage(props) {
               ) : (
                 <img className={classes.icon} src={clicked_like} alt="Like" />
               )}
+
             </button>
             <button
               className={classes.interact}

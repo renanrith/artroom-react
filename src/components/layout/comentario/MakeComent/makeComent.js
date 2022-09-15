@@ -3,10 +3,11 @@ import Axios from 'axios';
 import { useState } from 'react';
 
 export default function MakeComent(props) {
-  const [comment, setComment] = useState("");
+  const [comment, setComment] = useState([]);
 
   const handleSubmit = () => {
     Axios.post("http://localhost:8080/upload/insertComments", {
+      id: 1,
       comentario: comment,
       user: localStorage.getItem("username")
     })

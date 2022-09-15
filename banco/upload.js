@@ -10,8 +10,6 @@ router.post("/uploads", (req, res) => {
     const type = req.body.type;
     const like = req.body.like;
 
-    //fazer o sistema de checagem do tipo de post
-
     db.query(
         "insert into uploads(title, description, user, type, likes) values(?, ?, ?, ?, ?);",
         [titulo, descricao, author, type, like],
@@ -42,10 +40,7 @@ router.post("/insertComments", (req, res) => {
     const user = req.body.user;
     const id = req.body.id;
 
-    if(comentario === undefined && user === undefined) {
-        console.log("erro")
-    } else {
-        db.query( "insert into comments(comentario, user) values(?, ?) where id = ?;", [comentario, user, id], (err, results) => {
+        db.query( "insert into comment(texto, user) values(?, ?)", [comentario, user], (err, results) => {
             if (err) {
                 console.log(err);
             } else {
@@ -53,7 +48,6 @@ router.post("/insertComments", (req, res) => {
                 res.send(results);
             }
         })
-    }
 });
 
 router.post("/showComments", (req, res) => {
@@ -73,23 +67,28 @@ router.post("/like", (req, res) => {
     const user = req.body.user;
     const postID = req.body.id;
 
+    db.query("select * from userLiking where user = ? and postID = ?;", [user, postID], (err, results) => {
+        if(results.length > 0){
+            db.query("delete from userLiking where user = ? and postID = ?;", [user, postID])
+            db.query("update uploads set likes = likes - 1 where id = ?", [postID])
+            console.log("descurtiu")
+        } else {
     db.query("insert into userLiking(user, postID) values(?, ?)", [user, postID], (err, results) => {
         if (err) {
-            console.log(err);   
+            console.log(err);
         } else {
             db.query("update uploads set likes = likes + 1 where id = ?", postID, (err, results) => {
                 if (err) {
                     console.log(err);
                 } else {
-                    res.send(results);
                     console.log("liked")
                 }
             }
             )
         }
     })
-
-    
+}
+    })
 })
 
 router.post("/perfilPost", (req, res) => {

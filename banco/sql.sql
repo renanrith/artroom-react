@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 create database artroom;
+=======
+>>>>>>> 31e8c20da948d7bf11195d05b035762dc9121784
 
 use artroom;
 
@@ -21,15 +24,24 @@ create table if not exists uploads(
 
 create table if not exists comments(
 	id int auto_increment primary key not null,
-    description varchar (235),
-    user varchar(255)
+    texto varchar (235),
+    user varchar(255),
+    postID int,
+    foreign key (postID) references uploads(id)
 );
 
+<<<<<<< HEAD
 create table if not exists userliking(
 	id int auto_increment primary key not null,
 	user varchar(255),
     postID int
+=======
+create table if not exists userLiking(
+    id int auto_increment primary key not null,
+    user varchar(255),
+    postID int,
+    foreign key (postID) references uploads(id)
+>>>>>>> 31e8c20da948d7bf11195d05b035762dc9121784
 );
 
 select * from uploads;
-select * from usuarios;
