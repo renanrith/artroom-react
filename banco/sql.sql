@@ -1,3 +1,5 @@
+create database artroom;
+
 use artroom;
 
 create table if not exists usuarios(
@@ -13,15 +15,21 @@ create table if not exists uploads(
     title varchar(100),
     description varchar (235),
     user varchar(255),
-    type varchar(5)
+    type varchar(5),
+    likes int
 );
 
-create table if not exists comment(
+create table if not exists comments(
 	id int auto_increment primary key not null,
     description varchar (235),
     user varchar(255)
 );
 
+create table if not exists userliking(
+	id int auto_increment primary key not null,
+	user varchar(255),
+    postID int
+);
 
 select * from uploads;
 select * from usuarios;
