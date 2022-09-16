@@ -6,13 +6,14 @@ export default function ComentLists(props) {
     <ul className={classes.list}>
       {props.comments.map((comments) => {
         return (
-          <div>
+          <div key={comments.id}>
             <Coment
-              key={comments.id}
+              
               idComent={comments.idComent}
               user={comments.user}
               userImage={comments.user_image}
               texto={comments.texto}
+              postID={comments.postID}
             />
           </div>
         );

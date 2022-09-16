@@ -33,4 +33,4 @@ create table if not exists userLiking(
     foreign key (postID) references uploads(id)
 );
 
-select * from uploads;
+select * from comment;
