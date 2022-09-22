@@ -10,6 +10,7 @@ import{
 import PaginaInicial from "./paginas/paginaInicial";
 import Perfil from "./paginas/perfil";
 import PaginaLogin from "./paginas/paginaLogin";
+import MarketPlace from './paginas/marketPlace';
 
 const AppRoutes = () => {
     return(
@@ -18,7 +19,7 @@ const AppRoutes = () => {
                 <Route exact path="/" element={<PaginaLogin/>}/>
                 <Route exact path="/perfil" element={<Perfil/>}/>
                 <Route exact path="/home" element={<PaginaInicial/>}/>
-                <Route path='/marketplace'/>
+                <Route path='/marketplace' element={<MarketPlace/>}/>
             </Routes>
         </>
     )

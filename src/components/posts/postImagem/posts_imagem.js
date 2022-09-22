@@ -3,13 +3,11 @@ import classes from "./posts_imagem.module.css";
 import comment_icon from "../../../imagens/posts/comment_icon.png";
 import heart_icon from "../../../imagens/posts/heart_icon.png";
 import heart_icon_red from "../../../imagens/posts/heart_icon_red.png";
-import ReactAudioPlayer from "react-audio-player";
 import ComentLists from "../../layout/comentario/comentList";
 import Axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import MakeComent from "../../layout/comentario/MakeComent/makeComent";
 import ReactPlayer from 'react-player'
-import { AiOutlineSafety } from "react-icons/ai";
 
 const blank_like = heart_icon;
 const clicked_like = heart_icon_red;

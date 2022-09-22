@@ -7,7 +7,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useEffect } from "react";
 
-export default function Perfil() {
+export default function Perfil(props) {
   const [nick, setNick] = useState([]);
   const [perfilPosts, setPerfilPosts] = useState([]);
 
@@ -26,6 +26,13 @@ export default function Perfil() {
       setPerfilPosts(res.data);
     });
   });
+  
+  const dadosPefil = [
+    {
+      intersse: "Designer Digital",
+      bio: "Gosto muito de pintura digital e estou começando agr em 3D, me desejem sorte! ^^"
+    }
+  ]
 
   const DUMMY_DATA = [
     {
