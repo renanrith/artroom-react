@@ -1,4 +1,5 @@
 import PostImage from "./posts_imagem";
+import MakeComent from "../../layout/comentario/MakeComent/makeComent";
 import classes from "./posts_lists.module.css";
 
 export default function PostsLists(props) {
@@ -68,6 +69,7 @@ export default function PostsLists(props) {
           }
         })}
       </ul>
+      
     </div>
   );
 }

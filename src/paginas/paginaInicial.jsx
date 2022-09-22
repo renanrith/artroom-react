@@ -98,7 +98,7 @@ export default function PaginaInicial() {
 
   useEffect(() => {
     Axios.get("http://localhost:8080/upload/posts").then((res) => {
-      setPosts(res.data);
+      setPosts(res.data.reverse());
     });
   }, []);
 
@@ -117,7 +117,7 @@ export default function PaginaInicial() {
         <div className="posts">
           {
             
-              <PostsLists postsImages={posts.reverse()} />
+              <PostsLists postsImages={posts} />
           }
 
         </div>

@@ -1,20 +1,23 @@
 import classes from "./makeComent.module.css";
 import Axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import PostImage from "../../../posts/postImagem/posts_imagem";
+import { CommentContext } from "../../../../contexto/comment";
 
 export default function MakeComent(props) {
   const [comment, setComment] = useState([]);
+  const {postId: id} = useContext(CommentContext)
 
   const handleSubmit = () => {
     Axios.post("http://localhost:8080/upload/insertComments", {
-      id: 1,
+      id,
       comentario: comment,
       user: localStorage.getItem("username")
     })
     window.location.reload()
   };
-
   return (
+  <>
     <div>
       <div className={classes.fundo}>
         <textarea
@@ -30,5 +33,6 @@ export default function MakeComent(props) {
         <button className={classes.post} onClick={handleSubmit}>Comentar</button>
       </div>
     </div>
+  </>
   );
 }

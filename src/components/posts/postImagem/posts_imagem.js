@@ -5,9 +5,11 @@ import heart_icon from "../../../imagens/posts/heart_icon.png";
 import heart_icon_red from "../../../imagens/posts/heart_icon_red.png";
 import ComentLists from "../../layout/comentario/comentList";
 import Axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import MakeComent from "../../layout/comentario/MakeComent/makeComent";
 import ReactPlayer from 'react-player'
+import { AiOutlineSafety } from "react-icons/ai";
+import { CommentContext } from "../../../contexto/comment";
 
 const blank_like = heart_icon;
 const clicked_like = heart_icon_red;
@@ -22,16 +24,22 @@ export default function PostImage(props) {
   const [showComments, setShowComments] = useState(true);
   const [uploads, setUploads] = useState([]);
   const [comment, setComment] = useState("");
+  const {setPostId} = useContext(CommentContext);
 
 
   useEffect(() => { Axios.get("http://localhost:8080/upload/posts").then((res) => {
     setUploads(res.data);
   })}, []);
 
+
   const handleComment = (id) => {
+    const postID = id;
+    setPostId(postID)
     setShowComments(!showComments)
-    Axios.post("http://localhost:8080/upload/showComments").then((res) => {
-      setComments(res.data);
+    Axios.post("http://localhost:8080/upload/showComments", {
+      id: postID
+    }).then((res) => {
+      setComments(res.data.reverse());
     })
   };
 
@@ -90,6 +98,7 @@ export default function PostImage(props) {
 
               
             </button>
+            
             <button
               className={classes.interact}
               id={props.id}
@@ -104,7 +113,7 @@ export default function PostImage(props) {
             {showComments ? null : (
               <>
                 <MakeComent />
-                <ComentLists comments={comments.reverse()} />
+                <ComentLists comments={comments} />
               </>
             )}
           </div>
@@ -144,6 +153,7 @@ export default function PostImage(props) {
               )}
 
             </button>
+            {props.likes}
             <button
               className={classes.interact}
               id={props.id}
@@ -157,8 +167,8 @@ export default function PostImage(props) {
             </button>
             {showComments ? null : (
               <>
-                <MakeComent />
-                <ComentLists comments={comments.reverse()} />
+                <MakeComent id={props.id} />
+                <ComentLists comments={comments} />
               </>
             )}
           </div>
@@ -214,7 +224,7 @@ export default function PostImage(props) {
             {showComments ? null : (
               <>
                 <MakeComent />
-                <ComentLists comments={comments.reverse()} />
+                <ComentLists comments={comments} />
               </>
             )}
           </div>
@@ -271,7 +281,7 @@ export default function PostImage(props) {
             {showComments ? null : (
               <>
                 <MakeComent />
-                <ComentLists comments={comments.reverse()} />
+                <ComentLists comments={comments} />
               </>
             )}
           </div>

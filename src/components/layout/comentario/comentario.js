@@ -18,7 +18,6 @@ export default function Coment(props) {
         <div className={classes.content}>
           <p>{props.texto}</p>
         </div>
-        <div className={classes.actions}></div>
       </Post>
     </li>
   );
