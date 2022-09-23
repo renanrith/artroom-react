@@ -1,10 +1,10 @@
 .container {
   position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1500px;
   flex-wrap: wrap;
-  display: inline-flex;
 }
 
 .container .card {
