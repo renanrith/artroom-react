@@ -1,13 +1,19 @@
 import classes from "./marketItem.module.css";
 import Tilt from 'react-parallax-tilt';
 
+
+
 export default function MarketItem(props) {
+
 return(
+  
 <div  className={classes.container}>
-    <Tilt>
+<Tilt glarePosition="all" glareEnable="true" className={classes.card}>
     <div className={classes.card}>
       <div className={classes.content}>
-        <img src={props.image} alt="Imagem" />
+        
+         <img src={props.image} alt="Imagem" />
+
         <h2>{props.title}</h2>
         <h2>{props.preco} R$</h2>
         <p>{props.description}</p>

@@ -19,7 +19,6 @@ export default function MarketList(props) {
                 likes={marketItems.likes}
                 preco={marketItems.preco}
               />
-              
             </div>
           );
         })}

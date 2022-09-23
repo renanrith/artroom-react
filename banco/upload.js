@@ -40,7 +40,7 @@ router.post("/insertComments", (req, res) => {
     const user = req.body.user;
     const id = req.body.id;
 
-        db.query( "insert into comment(texto, user, postID) values(?, ?, ?)", [comentario, user, id], (err, results) => {
+        db.query( "insert into comments(texto, user, postID) values(?, ?, ?)", [comentario, user, id], (err, results) => {
             if (err) {
                 console.log(err);
             } else {
@@ -54,7 +54,7 @@ router.post("/insertComments", (req, res) => {
 router.post("/showComments", (req, res) => {
     const id = req.body.id;
 
-    db.query("select * from comment where postID = ?", [id],
+    db.query("select * from comments where postID = ?", [id],
     (err, results) => {
         if (err){
             console.log(err)
