@@ -18,7 +18,7 @@ const AppRoutes = () => {
         <> 
             <Routes>
                 <Route exact path="/" element={<PaginaLogin/>}/>
-                <Route exact path="/perfil" element={<Perfil/>}/>
+                <Route exact path="/perfil" element={<CommentProvider><Perfil/> </CommentProvider>}/>
                 <Route exact path="/home" element={ <CommentProvider><PaginaInicial/></CommentProvider> }/>
                 <Route path='/marketplace' element={<MarketPlace/>}/>
             </Routes>

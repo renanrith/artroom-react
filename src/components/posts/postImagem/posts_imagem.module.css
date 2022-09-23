@@ -67,6 +67,7 @@
   transform: scale(1.1);
   height: 20px;
   cursor: pointer;
+  transition: .3s ease;
 }
 
 .content {
