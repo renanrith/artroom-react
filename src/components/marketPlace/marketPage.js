@@ -12,27 +12,27 @@ export default function MarketPage() {
   return (
     <>
       <div className={classes.main}>
-        <div className={classes.center}>
-          <div className={classes.caixa}>
-            <div className={classes.cartao}>
-              <div classesName={classes.produto}>
-                <div className={classes.UploadImagem}>
-                  <img
-                    src="https://pbs.twimg.com/media/Fd3IoIQXoAEj8kN?format=jpg&name=large"
-                    alt="nicolas"
-                  />
-                </div>
-                <div className={classes.produtoLateral}>
-                  <h2>Desenho Arvore Roxa!</h2>
-                  <p>
-                    Arte feita a base digitais, retrata uma linda arvore roxa que
-                    apareceu em meu sonho.
-                  </p>
-                  <h2>22$$</h2>
-                  <a href="TelaCompra.html" >Comprar</a>
-                </div>
+
+        <div className={classes.caixa}>
+          <div className={classes.cartao}>
+            <div classesName={classes.produto}>
+              <div className={classes.produtoImagem}>
+                <img
+                  src="https://pbs.twimg.com/media/Fd3IoIQXoAEj8kN?format=jpg&name=large"
+                  alt="nicolas"
+                />
+              </div>
+              <div className={classes.produtoLateral}>
+                <h2>Desenho Arvore Roxa!</h2>
+                <p>
+                  Arte feita a base digitais, retrata uma linda arvore roxa que
+                  apareceu em meu sonho.
+                </p>
+                <h2>22$$</h2>
+                <button> Comprar </button>
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import classes from "./marketItem.module.css";
 import Tilt from 'react-parallax-tilt';
 
-
-
 export default function MarketItem(props) {
+
+
   return (
-   <div className={classes.container}>
+    <div className={classes.container}>
       <Tilt>
         <div className={classes.card}>
           <div className={classes.content}>
@@ -13,7 +13,9 @@ export default function MarketItem(props) {
             <h2>{props.title}</h2>
             <h2>{props.preco} R$</h2>
             <p>{props.description}</p>
-            <a>Ver mais</a>
+            <button onClick={props.onClick}>
+              Ver Mais
+            </button>
           </div>
         </div>
       </Tilt>

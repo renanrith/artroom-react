@@ -19,6 +19,9 @@ export default function MarketList(props) {
                 likes={marketItems.likes}
                 preco={marketItems.preco}
               />
+               <button onClick={props.onClick}>
+              Ver Mais
+            </button>
             </div>
           );
         })}
