@@ -1,9 +1,11 @@
 import classes from "./marketItem.module.css";
 import Tilt from 'react-parallax-tilt';
 
+
+
 export default function MarketItem(props) {
   return (
-    <div className={classes.container}>
+   <div className={classes.container}>
       <Tilt>
         <div className={classes.card}>
           <div className={classes.content}>

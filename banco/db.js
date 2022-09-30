@@ -1,10 +1,12 @@
 const mysql2 = require('mysql2');
 
+
+//Criando conexão com o banco
 const db = mysql2.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1234",
-    database: "artroom"
+    host: "localhost", // nome do host
+    user: "root", // nome do usuário
+    password: "1234", // senha do banco
+    database: "artroom" // nome do banco
 });
 
 module.exports = db;

@@ -23,7 +23,7 @@ export default function Perfil(props) {
     Axios.post("http://localhost:8080/upload/perfilPost", {
       username: localStorage.getItem("username"),
     }).then((res) => {
-      setPerfilPosts(res.data);
+      setPerfilPosts(res.data.reverse());
     });
   });
   

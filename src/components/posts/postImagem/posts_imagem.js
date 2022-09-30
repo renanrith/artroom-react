@@ -23,7 +23,6 @@ export default function PostImage(props) {
   const [comments, setComments] = useState([]);
   const [showComments, setShowComments] = useState(true);
   const [uploads, setUploads] = useState([]);
-  const [comment, setComment] = useState("");
   const {setPostId} = useContext(CommentContext);
 
 
