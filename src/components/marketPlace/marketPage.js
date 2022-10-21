@@ -32,6 +32,7 @@ export default function MarketPage() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       {/* <div className="modal">

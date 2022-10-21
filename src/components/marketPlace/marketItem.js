@@ -6,8 +6,9 @@ import MarketPage from "./marketPage";
 
 
 export default function MarketItem(props) {
-  return (
 
+
+  return (
     <div className={classes.container}>
       <Tilt>
         <div className={classes.card}>

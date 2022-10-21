@@ -20,7 +20,7 @@ export default function MakePosts() {
         + Novo Post
       </button>
       {modalIsOpen && <PostPopup />}
-      {modalIsOpen && <Backdrop onClick={ClosePostHandler} />}
+      {modalIsOpen && <Backdrop onClick={ClosePostHandler}/>}
     </div>
   );
 }
