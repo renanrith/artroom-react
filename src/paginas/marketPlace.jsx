@@ -9,7 +9,6 @@ import { useState } from "react";
 import Axios from "axios";
 import { useEffect } from "react";
 import MarketList from "../components/marketPlace/marketList";
-import MarketPage from "../components/marketPlace/marketPage";
 
 const dummyData = [
   {

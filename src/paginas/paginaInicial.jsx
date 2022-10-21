@@ -1,6 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+import { supabase } from "../supabase/supabase";
 
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
@@ -86,6 +87,14 @@ const RECOMENDED_POST = [
   },
 ];
 
+async function imageUpload(){
+  const avatarFile = "https://i.imgur.com/dEsSnPK.png"
+  const { data, error } = await supabase.storage
+  .from('images')
+  .upload('public/image11.png', avatarFile)
+  console.log(avatarFile) 
+};
+
 export default function PaginaInicial() {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
@@ -130,6 +139,9 @@ export default function PaginaInicial() {
             <PostsListsRec postsImages={RECOMENDED_POST} />
             <button className={classes.makePost} onClick={bosta}>
               LOGOUT
+            </button>
+            <button className={classes.makePost} onClick={imageUpload}>
+              botao
             </button>
           </div>
         </div>

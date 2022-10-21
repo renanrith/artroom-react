@@ -65,7 +65,7 @@ function registrar(props){
       <br />
       <div className={classes.field}>
         <input
-          type="text"
+          type="email"
           name="cadEmail"
           className={classes.dados}
           placeholder="E-mail"
