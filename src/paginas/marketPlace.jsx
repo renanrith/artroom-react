@@ -1,6 +1,8 @@
 import MainNavigation from "../components/layout/MainNavigation";
 import "./marketPlace.css";
 import chirio from "..//imagens//imgperfil//chirio.jpg";
+import MarketPage from "../components/marketPlace/marketPage";
+import Backdrop from "../components/layout/post/backdrop";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -59,6 +61,16 @@ const dummyData = [
 export default function MarketPlace() {
   const [nick, setNick] = useState([]);
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function PostHandler() {
+    setModalIsOpen(true);
+  }
+
+  function ClosePostHandler() {
+    setModalIsOpen(false);
+  }
+
   useEffect(() => {
     Axios.post("http://localhost:8080/user/getInformations", {
       getUser: localStorage.getItem("username"),
@@ -92,7 +104,9 @@ export default function MarketPlace() {
 
         <div className="center">
           <h2>Bem-vinde ao MarketPlace!</h2>
-          <MarketList marketItems={dummyData}/> 
+          <MarketList marketItems={dummyData} onClick={PostHandler}/> 
+          {modalIsOpen && <MarketPage/>}
+          {modalIsOpen && <Backdrop onClick={ClosePostHandler} />}
         </div>
       </div>
     </>

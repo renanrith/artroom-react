@@ -9,6 +9,7 @@ export default function MarketList(props) {
           return (
             <div>
               <MarketItem
+                onClick={props.onClick}
                 key={marketItems.id}
                 id={marketItems.id}
                 user={marketItems.user}

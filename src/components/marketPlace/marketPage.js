@@ -11,8 +11,7 @@ export default function MarketPage() {
 
   return (
     <>
-      <div className={classes.main}>
-        <div className={classes.center}>
+        <div className={classes.fundo}>
           <div className={classes.caixa}>
             <div className={classes.cartao}>
               <div classesName={classes.produto}>
@@ -35,7 +34,6 @@ export default function MarketPage() {
             </div>
           </div>
         </div>
-      </div>
       {/* <div className="modal">
       <h2>Comprado com Sucesso!</h2>
       <h3><img src="./img/arvoreroxa.png" alt=""/> <br/> Sua compra do produto "Arvore Roxa" <br/> foi concluida com sucesso, <br/> Obrigado!</h3> <br/> 
