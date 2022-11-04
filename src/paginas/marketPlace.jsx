@@ -1,7 +1,6 @@
 import MainNavigation from "../components/layout/MainNavigation";
 import "./marketPlace.css";
 import chirio from "..//imagens//imgperfil//chirio.jpg";
-import MarketPage from "../components/marketPlace/marketPage";
 import Backdrop from "../components/layout/post/backdrop";
 
 import { Link } from "react-router-dom";
@@ -9,6 +8,8 @@ import { useState } from "react";
 import Axios from "axios";
 import { useEffect } from "react";
 import MarketList from "../components/marketPlace/marketList";
+import MarketPageList from "../components/marketPlace/marketPageList";
+import KeyCreate from "../components/marketPlace/key/keyCreatre";
 
 const dummyData = [
   {
@@ -62,6 +63,15 @@ export default function MarketPlace() {
   const [nick, setNick] = useState([]);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [keyIsOpen, setKeyIsOpen] = useState(false);
+
+  function keyHandler(){
+    setKeyIsOpen(true);
+  }
+
+  function CloseKeyHandler() {
+    setKeyIsOpen(false);
+  }
 
   function PostHandler() {
     setModalIsOpen(true);
@@ -92,8 +102,10 @@ export default function MarketPlace() {
           </div>
           <h2> {nick} </h2>
 
-          <a className="btn"> Criar Chave de Compras </a>
-          <a className="btn">Atualizar Chave de Compras</a>
+          <button onClick={keyHandler} className="btn"> Criar Chave de Compras </button>
+          {keyIsOpen && <KeyCreate/>}
+          {keyIsOpen && <Backdrop onClick={CloseKeyHandler} />}
+          <button className="btn"> Upload </button>
 
           <div className="baixo">
             <Link to="/home">
@@ -105,7 +117,7 @@ export default function MarketPlace() {
         <div className="center">
           <h2>Bem-vinde ao MarketPlace!</h2>
           <MarketList marketItems={dummyData} onClick={PostHandler}/> 
-          {modalIsOpen && <MarketPage marketItems={dummyData} />}
+          {modalIsOpen && <MarketPageList marketItem={dummyData}/>}
           {modalIsOpen && <Backdrop onClick={ClosePostHandler} />}
         </div>
        

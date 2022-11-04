@@ -1,0 +1,57 @@
+.fundo {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-color: rgb(29, 12, 44);
+    color: aliceblue;
+    padding: 1rem;
+    text-align: center;
+    width: 30rem;
+    z-index: 10;
+    position: fixed;
+    top: 10vh;
+    left: calc(50% - 15rem);
+}
+
+.fundo h3 {
+    color: darkgrey;
+}
+
+button {
+    color: aliceblue;
+    background-color: #8d27ac;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: coolvetica;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+.dados {
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: coolvetica;
+    font-size: large;
+    background-color: #fca9ea;
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+}
+
+.dados1 {
+    width: 37%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    font-family: coolvetica;
+    font-size: large;
+    background-color: #fca9ea;
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+}

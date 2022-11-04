@@ -2,7 +2,7 @@ import classes from "./marketList.module.css";
 import MarketItem from "./marketItem";
 import MarketPage from "./marketPage";
 
-export default function MarketList(props) {
+export default function MarketPageList(props) {
   return (
     <div>
       <ul className={classes.list}>

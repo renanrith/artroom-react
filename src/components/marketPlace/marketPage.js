@@ -14,14 +14,15 @@ export default function MarketPage(props) {
       <div className={classes.fundo}>
         <div>
           <img
-            src="https://pbs.twimg.com/media/Fd3IoIQXoAEj8kN?format=jpg&name=large"
+            src={props.image}
             alt="nicolas"
           />
         </div>
         <div className={classes.texto}> 
         <h1>{props.title}</h1>
-        <h2>Artista</h2>
-        <h4> Sobre </h4>
+        <h2>{props.user}</h2>
+        <h4> {props.description} </h4>
+        <h4>R${props.preco}  </h4>
         <button> Comprar </button>
 
         </div>
