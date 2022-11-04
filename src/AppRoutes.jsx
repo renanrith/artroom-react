@@ -14,7 +14,6 @@ import MarketPlace from './paginas/marketPlace';
 import CommentProvider from './contexto/comment';
 import MarketPage from './components/marketPlace/marketPage';
 
-
 const AppRoutes = () => {
     return(
         <> 

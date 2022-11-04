@@ -1,6 +1,5 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-import PaginaInicial from "../AppRoutes";
 import Axios from "axios";
 import logo_sem_titulo from "../imagens/MainNavigation/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
