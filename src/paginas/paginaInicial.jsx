@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
-import { supabase } from "../supabase/supabase";
-
+import { supabase } from "../supabase/supabaseClient"
 import MainNavigation from "../components/layout/MainNavigation";
 import MakePosts from "../components/layout/Make_post";
 import classes from "../components/layout/Make_post.module.css";
