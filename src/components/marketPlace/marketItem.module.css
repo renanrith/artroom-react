@@ -50,7 +50,13 @@
   margin-top: -15px;
 }
 
-.container .card .content a {
+.content img {
+  max-height: 250px;
+  width: 250px;
+  margin-top: -37px;
+}
+
+.button {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -61,16 +67,10 @@
   text-decoration: none;
   font-weight: 500;
   margin-top: -8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
-.container .card .content a:hover {
+.button:hover {
   background-color: #d687f8;
   cursor: pointer;
-}
-
-.content img {
-  max-height: 250px;
-  width: 250px;
-  margin-top: -37px;
 }

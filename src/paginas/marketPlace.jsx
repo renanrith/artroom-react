@@ -9,7 +9,6 @@ import { useState } from "react";
 import Axios from "axios";
 import { useEffect } from "react";
 import MarketList from "../components/marketPlace/marketList";
-import MarketPage from "../components/marketPlace/marketPage";
 
 const dummyData = [
   {
@@ -106,11 +105,10 @@ export default function MarketPlace() {
         <div className="center">
           <h2>Bem-vinde ao MarketPlace!</h2>
           <MarketList marketItems={dummyData} onClick={PostHandler}/> 
-          {modalIsOpen && <MarketPage/>}
+          {modalIsOpen && <MarketPage marketItems={dummyData} />}
           {modalIsOpen && <Backdrop onClick={ClosePostHandler} />}
         </div>
-        {modalIsOpen && <MarketPage/>}
-        {modalIsOpen && <Backdrop onClick={ClosePostHandler}/>}
+       
       </div>
     </>
   );

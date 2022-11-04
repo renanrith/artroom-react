@@ -7,11 +7,25 @@ import { useState } from "react";
 import Axios from "axios";
 import { useEffect } from "react";
 
-export default function MarketPage() {
+export default function MarketPage(props) {
 
   return (
     <>
-        <div className={classes.fundo}>
+      <div className={classes.fundo}>
+        <div>
+          <img
+            src="https://pbs.twimg.com/media/Fd3IoIQXoAEj8kN?format=jpg&name=large"
+            alt="nicolas"
+          />
+        </div>
+        <div className={classes.texto}> 
+        <h1>{props.title}</h1>
+        <h2>Artista</h2>
+        <h4> Sobre </h4>
+        <button> Comprar </button>
+
+        </div>
+        {/*}
           <div className={classes.caixa}>
             <div className={classes.cartao}>
               <div classesName={classes.produto}>
@@ -34,11 +48,8 @@ export default function MarketPage() {
             </div>
 
           </div>
-        </div>
-      {/* <div className="modal">
-      <h2>Comprado com Sucesso!</h2>
-      <h3><img src="./img/arvoreroxa.png" alt=""/> <br/> Sua compra do produto "Arvore Roxa" <br/> foi concluida com sucesso, <br/> Obrigado!</h3> <br/> 
-      </div> */}
+   */}
+      </div>
     </>
   );
 }

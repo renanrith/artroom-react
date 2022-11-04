@@ -1,15 +1,54 @@
 .fundo {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  padding: 1rem;
+  background-color: rgb(29, 12, 44);
+  color: aliceblue;
+  padding: 0.1rem;
   text-align: center;
-  width: 100%;
+  width: 50rem;
   z-index: 10;
   position: fixed;
-  top: -5vh;
-  left: 0vw;
+  top: 10vh;
+  left: calc(40% - 15rem);
 }
 
+.fundo img{
+  width: 300px;
+  float: left;
+  margin: 30px;
+}
+
+.texto{
+  padding: 10px;
+  text-align: left;
+}
+
+h1{
+  text-align: center;
+  padding: 0;
+}
+
+.fundo button{
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: -8px;
+  border: none;
+}
+
+
+.fundo button:hover {
+  background-color: #d687f8;
+  cursor: pointer;
+}
+
+/*
 .caixa {
   position: relative;
   display: flex;
@@ -127,3 +166,5 @@
   width: 66%;
   
 }
+
+*/
