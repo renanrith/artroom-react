@@ -3,19 +3,44 @@ import chirio from "./../imagens/imgperfil/chirio.jpg";
 import PostsLists from "../components/posts/postImagem/posts_list";
 import MainNavigation from "../components/layout/MainNavigation";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { supabase } from "../supabase/supabaseClient";
 import Axios from "axios";
 import { useEffect } from "react";
 
 export default function Perfil(props) {
   const [nick, setNick] = useState([]);
   const [perfilPosts, setPerfilPosts] = useState([]);
+  const [perfilImage, setPerfilImage] = useState([]);
+
+  const fileInput = useRef(null);
+
+  async function handleFile(file){
+    
+    const fileExt = file.type.split('.')[1];
+    const fileName = `${Date.now()}.${fileExt}.png`;
+    const { data, error } = await supabase.storage
+    .from('images')
+    .upload(`pfp/${fileName}`, file);
+
+    const { data: publicURL, error: error2 } = await supabase
+    .storage
+    .from('images')
+    .getPublicUrl(`pfp/${fileName}`);
+
+    Axios.post("http://localhost:8080/user/pfp", {
+      pfp: publicURL.publicURL,
+      username: localStorage.getItem("username")
+  });
+  console.log(publicURL.publicURL)
+};
 
   useEffect(() => {
     Axios.post("http://localhost:8080/user/getInformations", {
       getUser: localStorage.getItem("username"),
     }).then((res) => {
       setNick(res.data.nickname);
+      setPerfilImage(res.data.userImage);
     });
   });
 
@@ -68,9 +93,9 @@ export default function Perfil(props) {
           <div className={classes.top}>
             <div className={classes.imgHeader}>
               <label htmlFor="file-input">
-                <img src={chirio} />
+                <img src={perfilImage} />
               </label>
-              <input id="file-input" type="file" />
+              <input id="file-input" type="file" accept=".png" ref={fileInput} onChange={(e) => { handleFile(e.target.files[0]) }}/>
             </div>
           </div>
         </div>

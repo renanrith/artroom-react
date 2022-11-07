@@ -26,7 +26,6 @@ export default function PostPopup(props){
     const { data: publicURL, error: publicURLError } = await supabase.storage
     .from('images')
     .getPublicUrl(`public/${fileName}`)
-    console.log(publicURL.publicURL)
 
     Axios.post("http://localhost:8080/upload/uploads", {
       titulo: titulo,

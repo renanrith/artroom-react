@@ -13,12 +13,12 @@ export default function PostsLists(props) {
                   key={postsImages.id}
                   id={postsImages.id}
                   user={postsImages.user}
-                  userImage={postsImages.user_image}
                   image={postsImages.image}
                   title={postsImages.title}
                   description={postsImages.description}
                   type={postsImages.type}
                   likes={postsImages.likes}
+                  userImage={postsImages.user_image}
                 />
               </div>
             );
@@ -29,11 +29,11 @@ export default function PostsLists(props) {
                   key={postsImages.id}
                   id={postsImages.id}
                   user={postsImages.user}
-                  userImage={postsImages.user_image}
                   title={postsImages.title}
                   description={postsImages.description}
                   type={postsImages.type}
                   likes={postsImages.likes}
+                  userImage={postsImages.user_image}
                 />
               </div>
             );
@@ -43,11 +43,11 @@ export default function PostsLists(props) {
                 key={postsImages.id}
                 id={postsImages.id}
                 user={postsImages.user}
-                userImage={postsImages.user_image}
                 title={postsImages.title}
                 description={postsImages.description}
                 type={postsImages.type}
                 likes={postsImages.likes}
+                userImage={postsImages.user_image}
               />
             );
           }
@@ -57,12 +57,12 @@ export default function PostsLists(props) {
                 key={postsImages.id}
                 id={postsImages.id}
                 user={postsImages.user}
-                userImage={postsImages.user_image}
                 title={postsImages.title}
                 description={postsImages.description}
                 type={postsImages.type}
                 video={postsImages.video}
                 likes={postsImages.likes}
+                userImage={postsImages.user_image}
               />
             );
           }
