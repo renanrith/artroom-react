@@ -119,7 +119,19 @@ router.post("/pfp", (req, res) => {
       }
     }
   );
+  db.query(
+    "UPDATE comments SET userImage = ? WHERE user = ?;",
+    [pfp, user],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("pfp atualizada");
+      }
+    }
+  );
 });
+
 
 
 module.exports = router;

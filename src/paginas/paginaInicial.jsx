@@ -86,13 +86,6 @@ const RECOMENDED_POST = [
   },
 ];
 
-async function imageUpload(){
-  const avatarFile = "https://i.imgur.com/dEsSnPK.png"
-  const { data, error } = await supabase.storage
-  .from('images')
-  .upload('public/image11.png', avatarFile)
-  console.log(avatarFile) 
-};
 
 export default function PaginaInicial() {
   const navigate = useNavigate();
