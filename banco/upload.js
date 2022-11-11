@@ -10,10 +10,11 @@ router.post("/uploads", (req, res) => {
     const type = req.body.type;
     const image = req.body.image;
     const like = req.body.like;
+    const userImage = req.body.userImage;
 
     db.query(
-        "insert into uploads(title, description, user, type, image, likes) values(?, ?, ?, ?, ?, ?);",
-        [titulo, descricao, author, type, image, like],
+        "insert into uploads(title, description, user, type, image, likes, userImage) values(?, ?, ?, ?, ?, ?, ?);",
+        [titulo, descricao, author, type, image, like, userImage],
         (err, results) => {
             if (err) {
                 console.log(err);

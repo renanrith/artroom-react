@@ -139,9 +139,6 @@ export default function PaginaInicial() {
             <button className={classes.makePost} onClick={bosta}>
               LOGOUT
             </button>
-            <button className={classes.makePost} onClick={imageUpload}>
-              botao
-            </button>
           </div>
         </div>
       </main>
