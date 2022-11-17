@@ -1,3 +1,4 @@
+create database artroom;
 use artroom;
 
 create table if not exists usuarios(
@@ -5,7 +6,8 @@ create table if not exists usuarios(
     nickname varchar(255) not null,
     usuario varchar(255) not null,
     email varchar(45) not null,
-    senha varchar(16) not null
+    senha varchar(16) not null,
+    userImage varchar(200) default 'https://t4.ftcdn.net/jpg/05/30/84/89/360_F_530848987_QCTV3I4uvMNXmweGoC4cJ5G9XLRtUDOU.jpg'
 );
 
 create table if not exists uploads(
@@ -14,6 +16,7 @@ create table if not exists uploads(
     description varchar (235),
     user varchar(255),
     type varchar(5),
+    image varchar(500),
     likes int
 );
 
@@ -31,5 +34,4 @@ create table if not exists userLiking(
     postID int,
     foreign key (postID) references uploads(id)
 );
-
-select * from comment;
+select * from usuarios;
