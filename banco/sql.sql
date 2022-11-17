@@ -17,7 +17,8 @@ create table if not exists uploads(
     user varchar(255),
     type varchar(5),
     image varchar(200),
-    likes int
+    likes int,
+    userImage varchar(200)
 );
 
 create table if not exists comments(
@@ -25,7 +26,8 @@ create table if not exists comments(
     texto varchar (235),
     user varchar(255),
     postID int,
-    foreign key (postID) references uploads(id)
+    foreign key (postID) references uploads(id),
+    userImage varchar(200)
 );
 
 create table if not exists userLiking(
@@ -34,4 +36,4 @@ create table if not exists userLiking(
     postID int,
     foreign key (postID) references uploads(id)
 );
-select * from usuarios;
+select * from uploadsusuarios;
