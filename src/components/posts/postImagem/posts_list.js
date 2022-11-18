@@ -18,7 +18,7 @@ export default function PostsLists(props) {
                   description={postsImages.description}
                   type={postsImages.type}
                   likes={postsImages.likes}
-                  userImage={postsImages.user_image}
+                  userImage={postsImages.userImage}
                 />
               </div>
             );
@@ -33,7 +33,7 @@ export default function PostsLists(props) {
                   description={postsImages.description}
                   type={postsImages.type}
                   likes={postsImages.likes}
-                  userImage={postsImages.user_image}
+                  userImage={postsImages.userImage}
                 />
               </div>
             );
@@ -47,7 +47,7 @@ export default function PostsLists(props) {
                 description={postsImages.description}
                 type={postsImages.type}
                 likes={postsImages.likes}
-                userImage={postsImages.user_image}
+                userImage={postsImages.userImage}
               />
             );
           }
@@ -62,7 +62,7 @@ export default function PostsLists(props) {
                 type={postsImages.type}
                 video={postsImages.video}
                 likes={postsImages.likes}
-                userImage={postsImages.user_image}
+                userImage={postsImages.userImage}
               />
             );
           }

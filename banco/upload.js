@@ -10,10 +10,11 @@ router.post("/uploads", (req, res) => {
     const type = req.body.type;
     const image = req.body.image;
     const like = req.body.like;
+    const userImage = req.body.userImage;
 
     db.query(
-        "insert into uploads(title, description, user, type, image, likes) values(?, ?, ?, ?, ?, ?);",
-        [titulo, descricao, author, type, image, like],
+        "insert into uploads(title, description, user, type, image, likes, userImage) values(?, ?, ?, ?, ?, ?, ?);",
+        [titulo, descricao, author, type, image, like, userImage],
         (err, results) => {
             if (err) {
                 console.log(err);
@@ -40,14 +41,14 @@ router.post("/insertComments", (req, res) => {
     const comentario = req.body.comentario;
     const user = req.body.user;
     const id = req.body.id;
+    const userImage = req.body.userImage;
 
-        db.query( "insert into comments(texto, user, postID) values(?, ?, ?)", [comentario, user, id], (err, results) => {
+        db.query( "insert into comments(texto, user, userImage, postID) values(?, ?, ?, ?)", [comentario, user, userImage, id], (err, results) => {
             if (err) {
                 console.log(err);
             } else {
                 console.log("comentado");
                 res.send(results);
-
             }
         })
 });

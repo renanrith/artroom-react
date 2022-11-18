@@ -53,7 +53,7 @@ router.post("/getInformations", (req, res) => {
         console.log(getUser)
       }
       if (results.length > 0) {
-        res.send({
+        res.json({
           nickname: results[0].nickname, 
           usuario: results[0].usuario,
           userImage : results[0].userImage,
@@ -108,7 +108,30 @@ router.post("/pfp", (req, res) => {
       }
     }
   );
+  db.query(
+    "UPDATE uploads SET userImage = ? WHERE user = ?;",
+    [pfp, user],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("pfp atualizada");
+      }
+    }
+  );
+  db.query(
+    "UPDATE comments SET userImage = ? WHERE user = ?;",
+    [pfp, user],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("pfp atualizada");
+      }
+    }
+  );
 });
+
 
 
 module.exports = router;
