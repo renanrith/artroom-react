@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import { supabase } from "../supabase/supabaseClient";
 import Axios from "axios";
 import logo_sem_titulo from "../imagens/MainNavigation/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,6 +13,15 @@ const PaginaLogin = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
+
+  const butao = async () => {
+    const file = "https://img.freepik.com/fotos-premium/a-imagem-do-cerebro-humano_99433-294.jpg?w=2000"
+
+    const { data, error } = await supabase.storage
+    .from('images')
+    .upload(`public/oi.png`, file);
+    console.log(file)
+  }
 
   const Login = () => {
     Axios.post("http://localhost:8080/user/logar", {
@@ -71,6 +81,7 @@ const PaginaLogin = () => {
           <div className="field">
             <button onClick={Login}>Login</button>
             <br />
+            <button onClick={butao}>butao</button>
             <h6 style={{ color: "red" }}>{errorMessage} </h6>
           </div>
           <p id="subtext">
