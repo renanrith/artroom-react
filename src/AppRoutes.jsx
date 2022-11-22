@@ -13,6 +13,7 @@ import PaginaLogin from "./paginas/paginaLogin";
 import MarketPlace from './paginas/marketPlace';
 import CommentProvider from './contexto/comment';
 import MarketPage from './components/marketPlace/marketPage';
+import PaginaConfig from './paginas/paginaConfig';
 
 const AppRoutes = () => {
     return(
@@ -22,6 +23,7 @@ const AppRoutes = () => {
                 <Route exact path="/perfil" element={<CommentProvider> <Perfil/> </CommentProvider>}/>
                 <Route exact path="/home" element={ <CommentProvider><PaginaInicial/></CommentProvider> }/>
                 <Route path='/marketplace' element={<MarketPlace/>}/>
+                <Route exact path='configuration' element={<PaginaConfig/>}/>
                 <Route path='product' element={<MarketPage/>}/>
             </Routes>
         </>

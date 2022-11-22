@@ -1,0 +1,18 @@
+@font-face {
+    font-family: coolvetica;
+    src: url(../imagens/fontes/coolvetica/coolvetica\ rg.otf);
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+
+  .main{
+    font-family: coolvetica;
+    color: aliceblue;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
