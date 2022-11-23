@@ -86,17 +86,11 @@ const RECOMENDED_POST = [
   },
 ];
 
-async function imageUpload(){
-  const avatarFile = "https://i.imgur.com/dEsSnPK.png"
-  const { data, error } = await supabase.storage
-  .from('images')
-  .upload('public/image11.png', avatarFile)
-  console.log(avatarFile) 
-};
-
 export default function PaginaInicial() {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
+
+  let randomPost = Math.floor(Math.random() * posts.length);
 
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
@@ -138,9 +132,6 @@ export default function PaginaInicial() {
             <PostsListsRec postsImages={RECOMENDED_POST} />
             <button className={classes.makePost} onClick={bosta}>
               LOGOUT
-            </button>
-            <button className={classes.makePost} onClick={imageUpload}>
-              botao
             </button>
           </div>
         </div>

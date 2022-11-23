@@ -17,6 +17,17 @@ export default function PostPopup(props){
   const hiddenFileInput = useRef(null);
 
   const handleSubmit = async (event) => {
+
+    if (fileUploaded == null || fileUploaded == undefined) {
+      Axios.post("http://localhost:8080/upload/uploads", {
+      titulo: titulo,
+      descricao: descricao,
+      author: localStorage.getItem("username"),
+      type : "text",
+      like: 0
+    });
+    } else {
+
     const fileExt = fileUploaded.type.split('.')[1];
     const fileName = `${Date.now()}.${fileExt}.png`;
     const { data, error } = await supabase.storage
@@ -27,14 +38,17 @@ export default function PostPopup(props){
     .from('images')
     .getPublicUrl(`public/${fileName}`)
 
-    Axios.post("http://localhost:8080/upload/uploads", {
-      titulo: titulo,
-      descricao: descricao,
-      author: localStorage.getItem("username"),
-      type : "image",
-      image: publicURL.publicURL.split('"'),
-      like: 0
-    });
+      Axios.post("http://localhost:8080/upload/uploads", {
+        titulo: titulo,
+        descricao: descricao,
+        descricao: descricao,
+        author: localStorage.getItem("username"),
+        type : "image",
+        image: publicURL.publicURL.split('"'),
+        like: 0
+      });
+    }
+
     navigate("/home");
   };
 
