@@ -7,6 +7,7 @@ import Marketplace_Icon from "../../imagens/MainNavigation/Marketplace_Icon.png"
 import logo_sem_titulo from "../../imagens/MainNavigation/logo_sem_titulo.svg";
 import Names from "./MOCK_DATA.json";
 import BarraPesquisa from "./searchBar.js";
+import { BsFillGearFill } from "react-icons/bs";
 
 import classes from "./MainNavigation.module.css";
 import ResponsiveMenu from "./responsiveMenu";
@@ -17,7 +18,6 @@ function MainNavigation() {
 
   const logo = () => {
     navigate("/home");
-    window.location.reload();
   };
 
   return (
@@ -37,6 +37,14 @@ function MainNavigation() {
                   alt="Bell Icon"
                   className={classes.icon}
                 />{" "}
+              </Link>{" "}
+            </li>
+            <li>
+              {" "}
+              <Link to="/configuration">
+                {" "}
+                <BsFillGearFill color="white" size={20} className={classes.iconconf}/>
+                {" "}
               </Link>{" "}
             </li>
             <li>

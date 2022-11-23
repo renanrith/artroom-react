@@ -11,8 +11,8 @@ export default function ComentLists(props) {
               
               idComent={comments.idComent}
               user={comments.user}
-              userImage={comments.user_image}
               texto={comments.texto}
+              userImage={comments.userImage}
               postID={comments.postID}
             />
           </div>

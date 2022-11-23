@@ -27,6 +27,9 @@
   cursor: pointer;
 }
 
+.uploadImage{
+  display: none;
+}
 
 .titulo{
   width: 100%;

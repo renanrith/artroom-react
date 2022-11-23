@@ -95,7 +95,7 @@ export default function Perfil(props) {
               <label htmlFor="file-input">
                 <img src={perfilImage} />
               </label>
-              <input id="file-input" type="file" accept=".png" ref={fileInput} onChange={(e) => { handleFile(e.target.files[0]) }}/>
+              <input id="file-input" type="file" accept=".png,.jpeg,.jpg,.webp" ref={fileInput} onChange={(e) => { handleFile(e.target.files[0]) }}/>
             </div>
           </div>
         </div>

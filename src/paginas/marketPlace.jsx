@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import MarketList from "../components/marketPlace/marketList";
 import MarketPageList from "../components/marketPlace/marketPageList";
 import KeyCreate from "../components/marketPlace/key/keyCreatre";
+import UploadPopUp from "../components/marketPlace/upload/uploadPopUp";
 
 const dummyData = [
   {
@@ -64,6 +65,7 @@ export default function MarketPlace() {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [keyIsOpen, setKeyIsOpen] = useState(false);
+  const [upIsOpen, setUpIsOpen] = useState(false);
 
   function keyHandler(){
     setKeyIsOpen(true);
@@ -73,6 +75,15 @@ export default function MarketPlace() {
     setKeyIsOpen(false);
   }
 
+  function UploadHandler() {
+    setUpIsOpen(true);
+  }
+
+  function CloseUploadHandler() {
+    setUpIsOpen(false);
+  }
+
+
   function PostHandler() {
     setModalIsOpen(true);
   }
@@ -80,6 +91,7 @@ export default function MarketPlace() {
   function ClosePostHandler() {
     setModalIsOpen(false);
   }
+
 
   useEffect(() => {
     Axios.post("http://localhost:8080/user/getInformations", {
@@ -105,7 +117,10 @@ export default function MarketPlace() {
           <button onClick={keyHandler} className="btn"> Criar Chave de Compras </button>
           {keyIsOpen && <KeyCreate/>}
           {keyIsOpen && <Backdrop onClick={CloseKeyHandler} />}
-          <button className="btn"> Upload </button>
+          <button onClick={UploadHandler} className="btn"> Upload </button>
+          {upIsOpen && <UploadPopUp/>}
+          {upIsOpen && <Backdrop onClick={CloseUploadHandler} />}
+          
 
           <div className="baixo">
             <Link to="/home">

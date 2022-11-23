@@ -16,7 +16,7 @@ export default function PostImageRec(props) {
       <Post>
         {/* User */}
         <div className={classes.user}>
-        <img draggable="false" className={classes.userImage} alt={props.user} src={props.userImage} />
+          <img draggable="false" className={classes.userImage} alt={props.user} src={props.userImage} />
           <h3 className={classes.user}>
 
             {props.user}
@@ -31,20 +31,6 @@ export default function PostImageRec(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button onClick={() => setSelected(!selected)}>
-            {selected ? (
-              <img draggable="false" className={classes.icon} src={blank_like} alt="Like" />
-            ) : (
-              <img draggable="false" className={classes.icon} src={clicked_like} alt="Like" />
-            )}
-          </button>
-          <button>
-            <img draggable="false"
-              className={classes.icon}
-              src={comment_icon}
-              alt="Comentarios"
-            />
-          </button>
         </div>
       </Post>
     </li>
