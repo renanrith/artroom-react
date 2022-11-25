@@ -18,7 +18,6 @@ function MainNavigation() {
 
   const logo = () => {
     navigate("/home");
-    window.location.reload();
   };
 
   return (

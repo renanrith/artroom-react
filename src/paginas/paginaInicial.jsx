@@ -86,10 +86,11 @@ const RECOMENDED_POST = [
   },
 ];
 
-
 export default function PaginaInicial() {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
+
+  let randomPost = Math.floor(Math.random() * posts.length);
 
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
