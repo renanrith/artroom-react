@@ -25,10 +25,20 @@ export default function PaginaConfig() {
   };
 
   const [nick, setNick] = useState([]);
+  const [username, setUsername] = useState([])
   const [perfilPosts, setPerfilPosts] = useState([]);
   const [perfilImage, setPerfilImage] = useState([]);
 
   const fileInput = useRef(null);
+
+  const deletar = () => {
+    Axios.post("http://localhost:8080/user/deleteAccount", {
+      user: localStorage.getItem("username"),
+    });
+    
+    localStorage.clear();
+    navigate("/");
+  }
 
   async function handleFile(file){
     
@@ -55,6 +65,7 @@ export default function PaginaConfig() {
       getUser: localStorage.getItem("username"),
     }).then((res) => {
       setNick(res.data.nickname);
+      setUsername(res.data.usuario)
       setPerfilImage(res.data.userImage);
     });
   });
@@ -74,7 +85,8 @@ export default function PaginaConfig() {
       
 
       <h1> Informações da Conta </h1>
-      <p> Nick : {nick} </p>
+      <p> Nome: {nick} </p>
+      <p> Nickname: {username} </p>
       <p> Foto: </p>
       <div className={classes.imgHeader}>
               <label htmlFor="file-input">
@@ -85,6 +97,9 @@ export default function PaginaConfig() {
       <br></br>
       <button className={classes.makePost} onClick={logout}>
               LOGOUT
+      </button>
+      <button className={classes.makePost} onClick={deletar}>
+              Deletar Conta
       </button>
 
       </div>

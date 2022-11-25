@@ -4,6 +4,7 @@ const router = express.Router();
 const db = require("./db");
 
 const jwt = require("jsonwebtoken");
+const { BsReverseLayoutTextWindowReverse } = require("react-icons/bs");
 
 router.post("/registrar", (req, res) => {
   const cadNickname = req.body.cadNickname;
@@ -56,7 +57,7 @@ router.post("/getInformations", (req, res) => {
         res.json({
           nickname: results[0].nickname, 
           usuario: results[0].usuario,
-          userImage : results[0].userImage,
+          userImage : results[0].userImage,   
         })
         }
     }  
@@ -121,6 +122,34 @@ router.post("/pfp", (req, res) => {
   );
 });
 
+router.post("/deleteAccount", (req, res) => {
+  const user = req.body.user;
+
+  db.query("DELETE from usuarios where usuario = ?;", [user],
+  (err, results) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log("deletado");
+    }
+  })
+  db.query("DELETE from uploads where user = ?;", [user],
+  (err, results) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log("deletado");
+    }
+  })
+  db.query("DELETE from comments where user = ?;", [user],
+  (err, results) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log("deletado");
+    }
+  })
+})
 
 
 module.exports = router;

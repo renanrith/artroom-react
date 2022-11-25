@@ -3,10 +3,11 @@ import "./marketPlace.css";
 import chirio from "..//imagens//imgperfil//chirio.jpg";
 import Backdrop from "../components/layout/post/backdrop";
 
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { supabase } from "../supabase/supabaseClient";
 import Axios from "axios";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import MarketList from "../components/marketPlace/marketList";
 import MarketPageList from "../components/marketPlace/marketPageList";
 import KeyCreate from "../components/marketPlace/key/keyCreatre";
@@ -62,7 +63,7 @@ const dummyData = [
 
 export default function MarketPlace() {
   const [nick, setNick] = useState([]);
-
+  const [perfilImage, setPerfilImage] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [keyIsOpen, setKeyIsOpen] = useState(false);
   const [upIsOpen, setUpIsOpen] = useState(false);
@@ -92,6 +93,34 @@ export default function MarketPlace() {
     setModalIsOpen(false);
   }
 
+  async function handleFile(file){
+    
+    const fileExt = file.type.split('.')[1];
+    const fileName = `${Date.now()}.${fileExt}.png`;
+    const { data, error } = await supabase.storage
+    .from('images')
+    .upload(`pfp/${fileName}`, file);
+
+    const { data: publicURL, error: error2 } = await supabase
+    .storage
+    .from('images')
+    .getPublicUrl(`pfp/${fileName}`);
+
+    Axios.post("http://localhost:8080/user/pfp", {
+      pfp: publicURL.publicURL,
+      username: localStorage.getItem("username")
+  });
+  console.log(publicURL.publicURL)
+};
+
+  useEffect(() => {
+    Axios.post("http://localhost:8080/user/getInformations", {
+      getUser: localStorage.getItem("username"),
+    }).then((res) => {
+      setNick(res.data.nickname);
+      setPerfilImage(res.data.userImage);
+    });
+  });
 
   useEffect(() => {
     Axios.post("http://localhost:8080/user/getInformations", {
@@ -109,7 +138,7 @@ export default function MarketPlace() {
           <div class="imagem">
             <Link to="/perfil">
               {" "}
-              <img src={chirio} />{" "}
+              <img src={perfilImage} />{" "}
             </Link>
           </div>
           <h2> {nick} </h2>
