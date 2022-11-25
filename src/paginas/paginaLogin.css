@@ -17,7 +17,7 @@ body {
     linear-gradient(90deg, rgba(21, 2, 54, 1) 30%, rgba(94, 7, 96, 1) 100%);
   background-repeat: no-repeat;
   background-size: contain;
-  overflow: hidden;
+  
 }
 
 .wrapper {
@@ -51,6 +51,10 @@ body {
   border: none;
 }
 
+.botaoCad{
+  display: none;
+}
+
 .cadastro button:hover {
   background-color: #c45ce4;
   padding: 11px;
@@ -73,7 +77,7 @@ body {
   text-align: center;
 
   margin-right: 6%;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 .login .cadastro {
@@ -108,6 +112,7 @@ body {
   color: aliceblue;
   text-decoration: none;
   border: none;
+  background-image: none;
 }
 
 .login button {
@@ -123,7 +128,7 @@ body {
 }
 
 #subtext {
-  max-width: 350px;
+  max-width: 400px;
   margin: auto;
   font-size: 15px;
 }
@@ -142,10 +147,10 @@ body {
   color: #fca9ea;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
   .login {
     padding: 20px;
-
+    width: 30rem;
     border-radius: 10px;
     float: right;
     height: 50%;
@@ -160,21 +165,25 @@ body {
     text-align: center;
 
     margin-right: 6%;
-    margin-top: 6%;
+    margin-top: 3%;
   }
 
   #subtext {
-    max-width: 200px;
+    max-width: 400px;
     margin: auto;
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .ola {
     overflow: auto;
     background-image: url("../imagens/login/fundo.jpg");
     background-size: cover;
+  }
+
+  .botaoCad{
+    display: block;
   }
 
   .wrapper {
@@ -211,7 +220,7 @@ body {
   }
 
   #subtext {
-    max-width: 200px;
+    max-width: 500px;
     margin: auto;
     font-size: 10px;
     padding-top: 10px;

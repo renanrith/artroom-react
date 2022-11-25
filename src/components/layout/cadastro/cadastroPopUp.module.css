@@ -10,6 +10,7 @@
     position: fixed;
     top: 10vh;
     left: calc(50% - 15rem);
+    overflow: auto;
 }
 
 .fundo h3{
@@ -21,10 +22,27 @@
     margin-bottom: 20px;
     border-radius: 10px;
     padding: 10px;
+    background-image: none;
     font-family: coolvetica;
     font-size: large;
     background-color: #FCA9EA;
     color: aliceblue;
     text-decoration: none;
     border: none;
+}
+
+@media (max-width: 900px){
+    .fundo{
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background-color: #481563;
+        color: aliceblue;
+        padding: 0.5rem;
+        text-align: center;
+        width: 30rem;
+        z-index: 10;
+        top: 0vh;
+        height: 400px;
+        left: calc(50% - 15rem);
+    }
 }

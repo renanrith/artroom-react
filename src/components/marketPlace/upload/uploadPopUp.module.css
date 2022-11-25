@@ -41,6 +41,7 @@ button {
     color: aliceblue;
     text-decoration: none;
     border: none;
+    background-image: none;
 }
 
 .dados1 {
@@ -55,4 +56,5 @@ button {
     color: aliceblue;
     text-decoration: none;
     border: none;
+    background-image: none;
 }

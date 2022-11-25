@@ -80,14 +80,15 @@ const PaginaLogin = () => {
           </div>
           <div className="field">
             <button onClick={Login}>Login</button>
-            <br />
-            <button onClick={butao}>butao</button>
+            <div className="botaoCad">
+            <CadastroButton />
+            </div>
             <h6 style={{ color: "red" }}>{errorMessage} </h6>
           </div>
           <p id="subtext">
             {" "}
             Ao continuar, você concorda com os{" "}
-            <a href="https://www.youtube.com/watch?v=o-V643L37QQ&t=621s">
+            <a>
               {" "}
               termos de serviços{" "}
             </a>{" "}
@@ -95,6 +96,9 @@ const PaginaLogin = () => {
             cookies{" "}
           </p>
         </div>
+        <div>
+            
+          </div>
       </div>
     </div>
   );

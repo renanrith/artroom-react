@@ -97,7 +97,7 @@ export default function PostImage(props) {
 
               
             </button>
-            
+            {props.likes}
             <button
               className={classes.interact}
               id={props.id}

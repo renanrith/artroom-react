@@ -104,12 +104,11 @@ export default function Perfil(props) {
       <div className={classes.bottom}>
         <div className={classes.bio}>
           <h3 className={classes.textoBranco}>{nick}</h3>
-          <h4 className={classes.textoBranco}>Designer Digital</h4>
+          <h4 className={classes.textoBranco}>Artista</h4>
           <p className={classes.textoRosa}>
-            Gosto muito de pintura digital e estou começando <br /> agr em 3D,
-            me desejem sorte! ^^{" "}
+            Olá! Eu estou usando o Artroom  {" "}
           </p>
-          <a className={classes.btn}>Chat</a>
+          
         </div>
 
         <PostsLists postsImages={perfilPosts} />

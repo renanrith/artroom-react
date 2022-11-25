@@ -129,9 +129,7 @@ export default function PaginaInicial() {
 
           <div className="recomended">
             <PostsListsRec postsImages={RECOMENDED_POST} />
-            <button className={classes.makePost} onClick={bosta}>
-              LOGOUT
-            </button>
+            
           </div>
         </div>
       </main>

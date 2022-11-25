@@ -5,7 +5,7 @@ const mysql2 = require('mysql2');
 const db = mysql2.createConnection({
     host: "localhost", // nome do host
     user: "root", // nome do usuário
-    password: "root", // senha do banco
+    password: "1234", // senha do banco
     database: "artroom" // nome do banco
 });
 
