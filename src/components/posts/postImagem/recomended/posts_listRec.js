@@ -9,10 +9,11 @@ export default function PostsListsRec(props) {
           key={postsImages.id}
           id={postsImages.id}
           user={postsImages.user}
-          userImage={postsImages.user_image}
           image={postsImages.image}
           title={postsImages.title}
           description={postsImages.description}
+          likes={postsImages.likes}
+          userImage={postsImages.userImage}
         />
       ))}
     </ul>

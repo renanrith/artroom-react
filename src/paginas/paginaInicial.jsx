@@ -30,7 +30,7 @@ const DUMMY_DATA = [
       " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg ",
 
     description: "Mona Lisa, yeah Pleased to please you Mona Lisa",
-    type: "image",
+    type: "image"
   },
   {
     id: "m3",
@@ -89,28 +89,31 @@ const RECOMENDED_POST = [
 export default function PaginaInicial() {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
+  const [recomendedPosts, setRecomendedPosts] = useState([]);
 
-  let randomPost = Math.floor(Math.random() * posts.length);
 
+const filterPosts = (posts) => {
+    // make a function that shuffles the posts and filters the posts that are images
+    let filteredPosts = posts.filter((post) => post.type === "image");
+    let shuffledPosts = filteredPosts.sort(() => Math.random() - 0.5);
+    let slicedPosts = shuffledPosts.slice(0, 1);
+    setRecomendedPosts(slicedPosts);
+  };
+  
   useEffect(() => {
     if (!localStorage.getItem("loggedIn")) {
       navigate("/");
     }
   });
+  
 
   useEffect(() => {
     Axios.get("http://localhost:8080/upload/posts").then((res) => {
       setPosts(res.data.reverse());
+      filterPosts(res.data);
     });
   }, []);
 
-  const bosta = () => {
-    if (localStorage.getItem("loggedIn")) {
-      localStorage.setItem("loggedIn", false);
-      localStorage.clear();
-      navigate("/");
-    }
-  };
 
   return (
     <div className="body">
@@ -129,7 +132,7 @@ export default function PaginaInicial() {
           </div>
 
           <div className="recomended">
-            <PostsListsRec postsImages={RECOMENDED_POST} />
+            <PostsListsRec postsImages={recomendedPosts} />
             
           </div>
         </div>
